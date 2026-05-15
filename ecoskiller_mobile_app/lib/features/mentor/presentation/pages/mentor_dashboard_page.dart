@@ -5,6 +5,7 @@ import 'package:animate_do/animate_do.dart';
 import 'package:ecoskiller_mobile_app/core/theme/app_theme.dart';
 import 'package:ecoskiller_mobile_app/features/auth/presentation/pages/login_page.dart';
 import 'package:ecoskiller_mobile_app/features/auth/data/providers/auth_service.dart';
+import 'package:ecoskiller_mobile_app/features/shark_tank/presentation/pages/mentor_shark_tank_page.dart';
 
 class MentorDashboardPage extends StatelessWidget {
   final Map<String, dynamic> user;
@@ -37,6 +38,10 @@ class MentorDashboardPage extends StatelessWidget {
                   _buildSectionTitle('PENDING REQUESTS'),
                   const SizedBox(height: 16),
                   _buildRequestsList(),
+                  const SizedBox(height: 32),
+                  _buildSectionTitle('INNOVATION NODES'),
+                  const SizedBox(height: 16),
+                  _buildSharkTankCard(context),
                 ],
               ),
             ),
@@ -180,6 +185,72 @@ class MentorDashboardPage extends StatelessWidget {
           const Spacer(),
           const Icon(LucideIcons.checkCircle, color: Colors.green),
         ],
+      ),
+    );
+  }
+
+  Widget _buildSharkTankCard(BuildContext context) {
+    return GestureDetector(
+      onTap: () {
+        Navigator.push(
+          context,
+          MaterialPageRoute(
+            builder: (context) => MentorSharkTankPage(user: user),
+          ),
+        );
+      },
+      child: Container(
+        padding: const EdgeInsets.all(20),
+        decoration: BoxDecoration(
+          gradient: const LinearGradient(
+            colors: [Color(0xFF6A11CB), Color(0xFF2575FC)],
+            begin: Alignment.topLeft,
+            end: Alignment.bottomRight,
+          ),
+          borderRadius: BorderRadius.circular(24),
+          boxShadow: [
+            BoxShadow(
+              color: Colors.deepPurple.withOpacity(0.2),
+              blurRadius: 15,
+              offset: const Offset(0, 8),
+            ),
+          ],
+        ),
+        child: Row(
+          children: [
+            Container(
+              padding: const EdgeInsets.all(12),
+              decoration: BoxDecoration(
+                color: Colors.white.withOpacity(0.1),
+                shape: BoxShape.circle,
+              ),
+              child: const Icon(LucideIcons.waves, color: Colors.white, size: 28),
+            ),
+            const SizedBox(width: 20),
+            Expanded(
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Text(
+                    'SHARK MENTORSHIP',
+                    style: GoogleFonts.inter(
+                      color: Colors.white,
+                      fontWeight: FontWeight.w900,
+                      fontSize: 16,
+                      letterSpacing: 1.5,
+                    ),
+                  ),
+                  const SizedBox(height: 4),
+                  Text(
+                    'Review and guide top innovations',
+                    style: GoogleFonts.inter(color: Colors.white70, fontSize: 12),
+                  ),
+                ],
+              ),
+            ),
+            const Icon(LucideIcons.chevronRight, color: Colors.white54),
+          ],
+        ),
       ),
     );
   }

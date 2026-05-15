@@ -5,6 +5,7 @@ import 'package:animate_do/animate_do.dart';
 import 'package:ecoskiller_mobile_app/core/theme/app_theme.dart';
 import 'package:ecoskiller_mobile_app/features/auth/presentation/pages/login_page.dart';
 import 'package:ecoskiller_mobile_app/features/auth/data/providers/auth_service.dart';
+import 'package:ecoskiller_mobile_app/features/shark_tank/presentation/pages/corporate_shark_tank_page.dart';
 
 class CorporateDashboardPage extends StatelessWidget {
   final Map<String, dynamic> user;
@@ -37,6 +38,10 @@ class CorporateDashboardPage extends StatelessWidget {
                   _buildSectionTitle('PARTNERSHIPS & DEALS'),
                   const SizedBox(height: 16),
                   _buildDealsList(),
+                  const SizedBox(height: 32),
+                  _buildSectionTitle('INNOVATION NODES'),
+                  const SizedBox(height: 16),
+                  _buildSharkTankCard(context),
                 ],
               ),
             ),
@@ -180,6 +185,72 @@ class CorporateDashboardPage extends StatelessWidget {
           const Spacer(),
           const Icon(LucideIcons.chevronRight, color: Colors.grey),
         ],
+      ),
+    );
+  }
+
+  Widget _buildSharkTankCard(BuildContext context) {
+    return GestureDetector(
+      onTap: () {
+        Navigator.push(
+          context,
+          MaterialPageRoute(
+            builder: (context) => CorporateSharkTankPage(user: user),
+          ),
+        );
+      },
+      child: Container(
+        padding: const EdgeInsets.all(20),
+        decoration: BoxDecoration(
+          gradient: const LinearGradient(
+            colors: [Color(0xFF232526), Color(0xFF414345)],
+            begin: Alignment.topLeft,
+            end: Alignment.bottomRight,
+          ),
+          borderRadius: BorderRadius.circular(24),
+          boxShadow: [
+            BoxShadow(
+              color: Colors.black.withOpacity(0.2),
+              blurRadius: 15,
+              offset: const Offset(0, 8),
+            ),
+          ],
+        ),
+        child: Row(
+          children: [
+            Container(
+              padding: const EdgeInsets.all(12),
+              decoration: BoxDecoration(
+                color: Colors.white.withOpacity(0.1),
+                shape: BoxShape.circle,
+              ),
+              child: const Icon(LucideIcons.waves, color: Colors.amber, size: 28),
+            ),
+            const SizedBox(width: 20),
+            Expanded(
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Text(
+                    'CORPORATE SCOUT',
+                    style: GoogleFonts.inter(
+                      color: Colors.white,
+                      fontWeight: FontWeight.w900,
+                      fontSize: 16,
+                      letterSpacing: 1.5,
+                    ),
+                  ),
+                  const SizedBox(height: 4),
+                  Text(
+                    'Flag and acquire top innovations',
+                    style: GoogleFonts.inter(color: Colors.white70, fontSize: 12),
+                  ),
+                ],
+              ),
+            ),
+            const Icon(LucideIcons.chevronRight, color: Colors.white54),
+          ],
+        ),
       ),
     );
   }

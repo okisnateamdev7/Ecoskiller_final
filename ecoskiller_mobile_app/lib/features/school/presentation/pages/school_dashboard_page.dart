@@ -5,6 +5,7 @@ import 'package:animate_do/animate_do.dart';
 import 'package:ecoskiller_mobile_app/core/theme/app_theme.dart';
 import 'package:ecoskiller_mobile_app/features/auth/presentation/pages/login_page.dart';
 import 'package:ecoskiller_mobile_app/features/auth/data/providers/auth_service.dart';
+import 'package:ecoskiller_mobile_app/features/shark_tank/presentation/pages/school_shark_tank_page.dart';
 
 class SchoolDashboardPage extends StatelessWidget {
   final Map<String, dynamic> user;
@@ -37,6 +38,10 @@ class SchoolDashboardPage extends StatelessWidget {
                   _buildSectionTitle('ACADEMIC HEALTH'),
                   const SizedBox(height: 16),
                   _buildHealthMetrics(),
+                  const SizedBox(height: 32),
+                  _buildSectionTitle('INNOVATION NODES'),
+                  const SizedBox(height: 16),
+                  _buildSharkTankCard(context),
                 ],
               ),
             ),
@@ -186,6 +191,72 @@ class SchoolDashboardPage extends StatelessWidget {
           valueColor: AlwaysStoppedAnimation<Color>(color),
         ),
       ],
+    );
+  }
+
+  Widget _buildSharkTankCard(BuildContext context) {
+    return GestureDetector(
+      onTap: () {
+        Navigator.push(
+          context,
+          MaterialPageRoute(
+            builder: (context) => SchoolSharkTankPage(user: user),
+          ),
+        );
+      },
+      child: Container(
+        padding: const EdgeInsets.all(20),
+        decoration: BoxDecoration(
+          gradient: const LinearGradient(
+            colors: [Color(0xFF6a11cb), Color(0xFF2575fc)],
+            begin: Alignment.topLeft,
+            end: Alignment.bottomRight,
+          ),
+          borderRadius: BorderRadius.circular(24),
+          boxShadow: [
+            BoxShadow(
+              color: Colors.purple.withOpacity(0.2),
+              blurRadius: 15,
+              offset: const Offset(0, 8),
+            ),
+          ],
+        ),
+        child: Row(
+          children: [
+            Container(
+              padding: const EdgeInsets.all(12),
+              decoration: BoxDecoration(
+                color: Colors.white.withOpacity(0.1),
+                shape: BoxShape.circle,
+              ),
+              child: const Icon(LucideIcons.flag, color: Colors.white, size: 28),
+            ),
+            const SizedBox(width: 20),
+            Expanded(
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Text(
+                    'CAMPUS SHARK TANK',
+                    style: GoogleFonts.inter(
+                      color: Colors.white,
+                      fontWeight: FontWeight.w900,
+                      fontSize: 16,
+                      letterSpacing: 1.5,
+                    ),
+                  ),
+                  const SizedBox(height: 4),
+                  Text(
+                    'Manage innovation rounds for students',
+                    style: GoogleFonts.inter(color: Colors.white70, fontSize: 12),
+                  ),
+                ],
+              ),
+            ),
+            const Icon(LucideIcons.chevronRight, color: Colors.white54),
+          ],
+        ),
+      ),
     );
   }
 }
