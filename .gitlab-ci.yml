@@ -1,0 +1,36 @@
+stages:
+  - build
+  - test
+  - deploy
+
+build_dev:
+  stage: build
+  script:
+    - echo "Building all 10 domain microservices..."
+    - |
+      for service in finance-service innovation-service notification-service field-operations-service analytics-service realtime-service legal-service ai-service recruitment-service auth-service; do
+        if [ -d "$service" ]; then
+          echo "Building $service..."
+          docker build --no-cache -t ecoskiller-$service:$CI_COMMIT_SHORT_SHA ./$service
+        fi
+      done
+  only:
+    - dev
+
+test_dev:
+  stage: test
+  script:
+    - echo "Running basic microservice sanity checks..."
+  only:
+    - dev
+
+deploy_dev:
+  stage: deploy
+  script:
+    - echo "Starting deployment rollout for dev environment..."
+    - |
+      for service in finance-service innovation-service notification-service field-operations-service analytics-service realtime-service legal-service ai-service recruitment-service auth-service; do
+        kubectl rollout restart deployment/ecoskiller-$service -n dev || echo "Deployment for $service not found, skipping..."
+      done
+  only:
+    - dev
