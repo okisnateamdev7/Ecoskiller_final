@@ -1,0 +1,25 @@
+server:
+  port: 8004
+
+spring:
+  application:
+    name: mcp-04-ai-governance
+
+mcp:
+  server:
+    name: mcp-04-ai-governance
+    version: "1.0.0"
+    description: "Ecoskiller CAT-04 — AI & Intelligence Governance"
+    namespace: core
+    priority: HIGH
+
+logging:
+  level:
+    com.ecoskiller: DEBUG
+    root: INFO
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health,info,metrics

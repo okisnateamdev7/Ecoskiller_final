@@ -9,7 +9,7 @@
     <version>1.0.0</version>
     <packaging>jar</packaging>
 
-    <n>Ecoskiller Royalty Ledger MCP Server</n>
+    <name>Ecoskiller Royalty Ledger MCP Server</name>
     <description>
         Secure Java MCP Server — CAT-ROYALTY-LEDGER
         Intellectual Property Rights and Royalty Accrual Tracking Service.

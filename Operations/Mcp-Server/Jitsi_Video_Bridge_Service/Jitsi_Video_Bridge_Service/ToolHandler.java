@@ -1,4 +1,4 @@
-package io.ecoskiller.mcp.jitsi.tools;
+package io.ecoskiller.mcp.jitsi;
 
 import java.util.Map;
 

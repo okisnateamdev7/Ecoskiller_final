@@ -1,0 +1,5 @@
+# Created at 2026-05-19T17:03:26.495
+Boot Manifest-JAR contains absolute paths in classpath 'D:\Project\Ecoskiller\Operations\Mcp-Server\redis-state-store-mcp\redis-state-store-mcp (1)\target\test-classes'
+Hint: <argLine>-Djdk.net.URLClassPath.disableClassPathURLCheck=true</argLine>
+'other' has different root
+

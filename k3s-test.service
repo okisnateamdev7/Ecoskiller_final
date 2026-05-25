@@ -1,0 +1,39 @@
+[Unit]
+Description=Lightweight Kubernetes Test Cluster
+Documentation=https://k3s.io
+Wants=network-online.target
+After=network-online.target
+
+[Install]
+WantedBy=multi-user.target
+
+[Service]
+Type=notify
+KillMode=process
+Delegate=yes
+User=root
+LimitNOFILE=1048576
+LimitNPROC=infinity
+LimitCORE=infinity
+TasksMax=infinity
+TimeoutStartSec=0
+Restart=always
+RestartSec=5s
+ExecStartPre=-/sbin/modprobe br_netfilter
+ExecStartPre=-/sbin/modprobe overlay
+ExecStart=/usr/local/bin/k3s server \
+    --https-listen-port 6463 \
+    --lb-server-port 6465 \
+    --data-dir /var/lib/rancher/k3s-test \
+    --write-kubeconfig /etc/rancher/k3s/k3s-test.yaml \
+    --write-kubeconfig-mode 644 \
+    --kubelet-arg=--port=10252 \
+    --kubelet-arg=--healthz-port=10247 \
+    --kube-controller-manager-arg=--secure-port=10277 \
+    --kube-scheduler-arg=--secure-port=10279 \
+    --kube-proxy-arg=--metrics-bind-address=127.0.0.1:10240 \
+    --kube-proxy-arg=--healthz-port=10237 \
+    --flannel-backend=host-gw \
+    --disable traefik \
+    --disable servicelb \
+    --disable-cloud-controller

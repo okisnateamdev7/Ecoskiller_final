@@ -10,7 +10,7 @@ import java.time.Instant;
 // ═══════════════════════════════════════════════════════════════════════════════
 // AGENT 16 — RECRUITER_ANALYTICS_GET
 // ═══════════════════════════════════════════════════════════════════════════════
-public class RecruiterAnalyticsGetAgent extends BaseAgent {
+class RecruiterAnalyticsGetAgent extends BaseAgent {
     public RecruiterAnalyticsGetAgent(ServerConfig c, AuditLogger a) { super(c, a); }
 
     @Override public JsonNode getToolDefinition() {
@@ -93,7 +93,7 @@ public class RecruiterAnalyticsGetAgent extends BaseAgent {
 // ═══════════════════════════════════════════════════════════════════════════════
 // AGENT 17 — RECRUITER_WEBHOOK_REGISTER
 // ═══════════════════════════════════════════════════════════════════════════════
-public class RecruiterWebhookRegisterAgent extends BaseAgent {
+class RecruiterWebhookRegisterAgent extends BaseAgent {
     public RecruiterWebhookRegisterAgent(ServerConfig c, AuditLogger a) { super(c, a); }
 
     @Override public JsonNode getToolDefinition() {
@@ -157,7 +157,7 @@ public class RecruiterWebhookRegisterAgent extends BaseAgent {
 // ═══════════════════════════════════════════════════════════════════════════════
 // AGENT 18 — RECRUITER_AUDIT_LOG_QUERY
 // ═══════════════════════════════════════════════════════════════════════════════
-public class RecruiterAuditLogQueryAgent extends BaseAgent {
+class RecruiterAuditLogQueryAgent extends BaseAgent {
     public RecruiterAuditLogQueryAgent(ServerConfig c, AuditLogger a) { super(c, a); }
 
     @Override public JsonNode getToolDefinition() {
@@ -221,7 +221,7 @@ public class RecruiterAuditLogQueryAgent extends BaseAgent {
         compliance.put("right_to_access",    "Admin can export full log for DPDPA requests");
         compliance.put("right_to_erasure",   "Soft-delete + anonymisation after 7 years");
         compliance.put("gst_compliance",     "Invoice events linked to subscription for tax reporting");
-        compliance.put("immutable",          "ClickHouse write-only (no UPDATE/DELETE on audit tables)");
+        compliance.put("immutable",          true);
 
         res.put("latency_target", "p95 < 500ms (ClickHouse OLAP query)");
         return res;

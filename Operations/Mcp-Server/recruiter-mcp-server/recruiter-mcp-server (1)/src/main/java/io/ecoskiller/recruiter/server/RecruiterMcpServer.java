@@ -54,28 +54,7 @@ public class RecruiterMcpServer {
     }
 
     private void registerAgents() {
-        // Account & Profile
-        agents.put("recruiter_account_onboard",       new RecruiterAccountOnboardAgent(config, audit));
-        agents.put("recruiter_profile_get",           new RecruiterProfileGetAgent(config, audit));
-        agents.put("recruiter_profile_update",        new RecruiterProfileUpdateAgent(config, audit));
-        agents.put("recruiter_dashboard_get",         new RecruiterDashboardGetAgent(config, audit));
-        agents.put("recruiter_applications_list",     new RecruiterApplicationsListAgent(config, audit));
-        // Candidates & Notifications
-        agents.put("recruiter_candidate_save",        new RecruiterCandidateSaveAgent(config, audit));
-        agents.put("recruiter_saved_candidates_list", new RecruiterSavedCandidatesListAgent(config, audit));
-        agents.put("recruiter_notifications_get",     new RecruiterNotificationsGetAgent(config, audit));
-        agents.put("recruiter_notification_mark_read",new RecruiterNotificationMarkReadAgent(config, audit));
-        agents.put("recruiter_subscription_get",      new RecruiterSubscriptionGetAgent(config, audit));
-        // Team & Subscription
-        agents.put("recruiter_team_get",              new RecruiterTeamGetAgent(config, audit));
-        agents.put("recruiter_team_invite",           new RecruiterTeamInviteAgent(config, audit));
-        agents.put("recruiter_team_remove",           new RecruiterTeamRemoveAgent(config, audit));
-        agents.put("recruiter_subscription_upgrade",  new RecruiterSubscriptionUpgradeAgent(config, audit));
-        agents.put("recruiter_subscription_cancel",   new RecruiterSubscriptionCancelAgent(config, audit));
-        // Analytics, Webhooks, Compliance
-        agents.put("recruiter_analytics_get",         new RecruiterAnalyticsGetAgent(config, audit));
-        agents.put("recruiter_webhook_register",      new RecruiterWebhookRegisterAgent(config, audit));
-        agents.put("recruiter_audit_log_query",       new RecruiterAuditLogQueryAgent(config, audit));
+        agents.putAll(AgentFactory.createAllAgents(config, audit));
     }
 
     // ── Main loop ────────────────────────────────────────────────────────────
@@ -96,7 +75,7 @@ public class RecruiterMcpServer {
 
     // ── JSON-RPC dispatcher ──────────────────────────────────────────────────
 
-    String dispatch(String raw) {
+    public String dispatch(String raw) {
         JsonNode req;
         try { req = mapper.readTree(raw); }
         catch (Exception e) { return err(null, -32700, "Parse error: " + e.getMessage()); }
@@ -256,7 +235,7 @@ public class RecruiterMcpServer {
         root.setLevel(Level.INFO);
         for (Handler h : root.getHandlers()) root.removeHandler(h);
         ConsoleHandler h = new ConsoleHandler();
-        h.setStream(System.err);  // logs to stderr; stdout reserved for JSON-RPC
+        // h.setStream(System.err);  // logs to stderr; stdout reserved for JSON-RPC
         h.setLevel(Level.ALL);
         h.setFormatter(new SimpleFormatter());
         root.addHandler(h);

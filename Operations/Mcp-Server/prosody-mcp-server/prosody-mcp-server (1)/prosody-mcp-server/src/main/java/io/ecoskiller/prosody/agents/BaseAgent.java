@@ -1,6 +1,7 @@
 package io.ecoskiller.prosody.agents;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
+import com.fasterxml.jackson.databind.node.ArrayNode;
 import com.fasterxml.jackson.databind.node.ObjectNode;
 import io.ecoskiller.prosody.config.ServerConfig;
 import io.ecoskiller.prosody.security.AuditLogger;
@@ -58,11 +59,12 @@ public abstract class BaseAgent implements AgentHandler {
         ObjectNode schema = mapper.createObjectNode();
         schema.put("type", "object");
         ObjectNode properties = schema.putObject("properties");
-        ObjectNode required = mapper.createArrayNode();
+        ArrayNode required = mapper.createArrayNode();
         for (String field : requiredFields) {
             properties.putObject(field).put("type", "string");
+            required.add(field);
         }
-        schema.putArray("required");
+        schema.set("required", required);
         return schema;
     }
 

@@ -1,4 +1,4 @@
-package io.ecoskiller.mcp.jitsi.model;
+package io.ecoskiller.mcp.jitsi;
 
 import java.util.*;
 import java.util.concurrent.ConcurrentHashMap;

@@ -1,0 +1,38 @@
+-------------------------------------------------------------------------------
+Test set: io.ecoskiller.royalty.RoyaltyLedgerMcpServerTest
+-------------------------------------------------------------------------------
+Tests run: 28, Failures: 2, Errors: 1, Skipped: 0, Time elapsed: 0.700 s <<< FAILURE! -- in io.ecoskiller.royalty.RoyaltyLedgerMcpServerTest
+io.ecoskiller.royalty.RoyaltyLedgerMcpServerTest.testIpRegister -- Time elapsed: 0.098 s <<< FAILURE!
+org.opentest4j.AssertionFailedError: expected: <success> but was: <registered>
+	at org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
+	at org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)
+	at org.junit.jupiter.api.AssertEquals.failNotEqual(AssertEquals.java:197)
+	at org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:182)
+	at org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:177)
+	at org.junit.jupiter.api.Assertions.assertEquals(Assertions.java:1145)
+	at io.ecoskiller.royalty.RoyaltyLedgerMcpServerTest.testIpRegister(RoyaltyLedgerMcpServerTest.java:70)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+
+io.ecoskiller.royalty.RoyaltyLedgerMcpServerTest.testPayoutRequest -- Time elapsed: 0.012 s <<< FAILURE!
+org.opentest4j.AssertionFailedError: expected: <success> but was: <scheduled>
+	at org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
+	at org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)
+	at org.junit.jupiter.api.AssertEquals.failNotEqual(AssertEquals.java:197)
+	at org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:182)
+	at org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:177)
+	at org.junit.jupiter.api.Assertions.assertEquals(Assertions.java:1145)
+	at io.ecoskiller.royalty.RoyaltyLedgerMcpServerTest.testPayoutRequest(RoyaltyLedgerMcpServerTest.java:182)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+
+io.ecoskiller.royalty.RoyaltyLedgerMcpServerTest.testSplitConfigManage -- Time elapsed: 0.012 s <<< ERROR!
+java.lang.NullPointerException: Cannot invoke "com.fasterxml.jackson.databind.JsonNode.get(String)" because the return value of "com.fasterxml.jackson.databind.JsonNode.get(String)" is null
+	at io.ecoskiller.royalty.RoyaltyLedgerMcpServerTest.content(RoyaltyLedgerMcpServerTest.java:390)
+	at io.ecoskiller.royalty.RoyaltyLedgerMcpServerTest.testSplitConfigManage(RoyaltyLedgerMcpServerTest.java:310)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+

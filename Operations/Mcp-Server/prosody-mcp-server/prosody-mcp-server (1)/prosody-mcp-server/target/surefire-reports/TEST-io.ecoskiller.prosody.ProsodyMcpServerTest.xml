@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report-3.0.xsd" version="3.0" name="io.ecoskiller.prosody.ProsodyMcpServerTest" time="0.669" tests="20" errors="0" skipped="0" failures="0">
+  <properties>
+    <property name="java.specification.version" value="21"/>
+    <property name="sun.cpu.isalist" value="amd64"/>
+    <property name="sun.jnu.encoding" value="Cp1252"/>
+    <property name="java.class.path" value="D:\Project\Ecoskiller\Operations\Mcp-Server\prosody-mcp-server\prosody-mcp-server (1)\prosody-mcp-server\target\test-classes;D:\Project\Ecoskiller\Operations\Mcp-Server\prosody-mcp-server\prosody-mcp-server (1)\prosody-mcp-server\target\classes;C:\Users\bljsr\.m2\repository\com\fasterxml\jackson\core\jackson-databind\2.17.1\jackson-databind-2.17.1.jar;C:\Users\bljsr\.m2\repository\com\fasterxml\jackson\core\jackson-core\2.17.1\jackson-core-2.17.1.jar;C:\Users\bljsr\.m2\repository\com\fasterxml\jackson\core\jackson-annotations\2.17.1\jackson-annotations-2.17.1.jar;C:\Users\bljsr\.m2\repository\org\junit\jupiter\junit-jupiter\5.10.2\junit-jupiter-5.10.2.jar;C:\Users\bljsr\.m2\repository\org\junit\jupiter\junit-jupiter-api\5.10.2\junit-jupiter-api-5.10.2.jar;C:\Users\bljsr\.m2\repository\org\opentest4j\opentest4j\1.3.0\opentest4j-1.3.0.jar;C:\Users\bljsr\.m2\repository\org\junit\platform\junit-platform-commons\1.10.2\junit-platform-commons-1.10.2.jar;C:\Users\bljsr\.m2\repository\org\apiguardian\apiguardian-api\1.1.2\apiguardian-api-1.1.2.jar;C:\Users\bljsr\.m2\repository\org\junit\jupiter\junit-jupiter-params\5.10.2\junit-jupiter-params-5.10.2.jar;C:\Users\bljsr\.m2\repository\org\junit\jupiter\junit-jupiter-engine\5.10.2\junit-jupiter-engine-5.10.2.jar;C:\Users\bljsr\.m2\repository\org\junit\platform\junit-platform-engine\1.10.2\junit-platform-engine-1.10.2.jar;"/>
+    <property name="java.vm.vendor" value="Oracle Corporation"/>
+    <property name="sun.arch.data.model" value="64"/>
+    <property name="user.variant" value=""/>
+    <property name="java.vendor.url" value="https://java.oracle.com/"/>
+    <property name="user.timezone" value="Asia/Calcutta"/>
+    <property name="os.name" value="Windows 11"/>
+    <property name="java.vm.specification.version" value="21"/>
+    <property name="sun.java.launcher" value="SUN_STANDARD"/>
+    <property name="user.country" value="US"/>
+    <property name="sun.boot.library.path" value="C:\Program Files\Java\jdk-21\bin"/>
+    <property name="sun.java.command" value="C:\Users\bljsr\AppData\Local\Temp\surefire9519105220835121185\surefirebooter-20260519161713666_3.jar C:\Users\bljsr\AppData\Local\Temp\surefire9519105220835121185 2026-05-19T16-17-13_460-jvmRun1 surefire-20260519161713666_1tmp surefire_0-20260519161713666_2tmp"/>
+    <property name="jdk.debug" value="release"/>
+    <property name="surefire.test.class.path" value="D:\Project\Ecoskiller\Operations\Mcp-Server\prosody-mcp-server\prosody-mcp-server (1)\prosody-mcp-server\target\test-classes;D:\Project\Ecoskiller\Operations\Mcp-Server\prosody-mcp-server\prosody-mcp-server (1)\prosody-mcp-server\target\classes;C:\Users\bljsr\.m2\repository\com\fasterxml\jackson\core\jackson-databind\2.17.1\jackson-databind-2.17.1.jar;C:\Users\bljsr\.m2\repository\com\fasterxml\jackson\core\jackson-core\2.17.1\jackson-core-2.17.1.jar;C:\Users\bljsr\.m2\repository\com\fasterxml\jackson\core\jackson-annotations\2.17.1\jackson-annotations-2.17.1.jar;C:\Users\bljsr\.m2\repository\org\junit\jupiter\junit-jupiter\5.10.2\junit-jupiter-5.10.2.jar;C:\Users\bljsr\.m2\repository\org\junit\jupiter\junit-jupiter-api\5.10.2\junit-jupiter-api-5.10.2.jar;C:\Users\bljsr\.m2\repository\org\opentest4j\opentest4j\1.3.0\opentest4j-1.3.0.jar;C:\Users\bljsr\.m2\repository\org\junit\platform\junit-platform-commons\1.10.2\junit-platform-commons-1.10.2.jar;C:\Users\bljsr\.m2\repository\org\apiguardian\apiguardian-api\1.1.2\apiguardian-api-1.1.2.jar;C:\Users\bljsr\.m2\repository\org\junit\jupiter\junit-jupiter-params\5.10.2\junit-jupiter-params-5.10.2.jar;C:\Users\bljsr\.m2\repository\org\junit\jupiter\junit-jupiter-engine\5.10.2\junit-jupiter-engine-5.10.2.jar;C:\Users\bljsr\.m2\repository\org\junit\platform\junit-platform-engine\1.10.2\junit-platform-engine-1.10.2.jar;"/>
+    <property name="sun.cpu.endian" value="little"/>
+    <property name="user.home" value="C:\Users\bljsr"/>
+    <property name="user.language" value="en"/>
+    <property name="java.specification.vendor" value="Oracle Corporation"/>
+    <property name="java.version.date" value="2025-10-21"/>
+    <property name="java.home" value="C:\Program Files\Java\jdk-21"/>
+    <property name="file.separator" value="\"/>
+    <property name="basedir" value="D:\Project\Ecoskiller\Operations\Mcp-Server\prosody-mcp-server\prosody-mcp-server (1)\prosody-mcp-server"/>
+    <property name="java.vm.compressedOopsMode" value="32-bit"/>
+    <property name="line.separator" value="&#10;"/>
+    <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
+    <property name="java.specification.name" value="Java Platform API Specification"/>
+    <property name="surefire.real.class.path" value="C:\Users\bljsr\AppData\Local\Temp\surefire9519105220835121185\surefirebooter-20260519161713666_3.jar"/>
+    <property name="user.script" value=""/>
+    <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
+    <property name="java.runtime.version" value="21.0.9+7-LTS-338"/>
+    <property name="user.name" value="Balaji Suryavanshi"/>
+    <property name="PROSODY_JWT_SECRET" value="test-secret-key-for-unit-tests"/>
+    <property name="stdout.encoding" value="Cp1252"/>
+    <property name="path.separator" value=";"/>
+    <property name="os.version" value="10.0"/>
+    <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
+    <property name="file.encoding" value="UTF-8"/>
+    <property name="java.vm.name" value="Java HotSpot(TM) 64-Bit Server VM"/>
+    <property name="localRepository" value="C:\Users\bljsr\.m2\repository"/>
+    <property name="java.vendor.url.bug" value="https://bugreport.java.com/bugreport/"/>
+    <property name="java.io.tmpdir" value="C:\Users\bljsr\AppData\Local\Temp\"/>
+    <property name="java.version" value="21.0.9"/>
+    <property name="user.dir" value="D:\Project\Ecoskiller\Operations\Mcp-Server\prosody-mcp-server\prosody-mcp-server (1)\prosody-mcp-server"/>
+    <property name="os.arch" value="amd64"/>
+    <property name="java.vm.specification.name" value="Java Virtual Machine Specification"/>
+    <property name="sun.os.patch.level" value=""/>
+    <property name="native.encoding" value="Cp1252"/>
+    <property name="java.library.path" value="C:\Program Files\Java\jdk-21\bin;C:\WINDOWS\Sun\Java\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\Python312\Scripts\;C:\Python312\;C:\Program Files\Common Files\Oracle\Java\javapath;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\Program Files\Java\jdk-21\bin;C:\Program Files\dotnet\;C:\Program Files\NVIDIA Corporation\NVIDIA app\NvDLISR;C:\Program Files\nodejs\;C:\ProgramData\chocolatey\bin;C:\Program Files\Microsoft SQL Server\150\Tools\Binn\;C:\Program Files\Microsoft SQL Server\Client SDK\ODBC\170\Tools\Binn\;C:\Users\bljsr\AppData\Local\Microsoft\WindowsApps;C:\Users\bljsr\AppData\Local\Programs\Microsoft VS Code\bin;C:\Users\bljsr\AppData\Roaming\npm;C:\Users\bljsr\.dotnet\tools;C:\flutter\bin;C:\Program Files\Docker\Docker\resources\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Program Files\Amazon\AWSCLIV2\;C:\Program Files\Git\cmd;C:\Program Files\GitHub CLI\;C:\Users\bljsr\.local\bin;C:\Users\bljsr\AppData\Local\Microsoft\WindowsApps;C:\Users\bljsr\AppData\Local\Programs\Microsoft VS Code\bin;C:\Users\bljsr\AppData\Roaming\npm;C:\Users\bljsr\.dotnet\tools;C:\Users\bljsr\AppData\Local\Programs\Ollama;C:\Users\bljsr\AppData\Local\Programs\Antigravity\bin;C:\Users\bljsr\AppData\Local\Programs\cursor\resources\app\bin;c:\Ecoskiller\maven_bin\bin;."/>
+    <property name="java.vm.info" value="mixed mode, sharing"/>
+    <property name="stderr.encoding" value="Cp1252"/>
+    <property name="java.vendor" value="Oracle Corporation"/>
+    <property name="java.vm.version" value="21.0.9+7-LTS-338"/>
+    <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
+    <property name="java.class.version" value="65.0"/>
+  </properties>
+  <testcase name="testInitialize" classname="io.ecoskiller.prosody.ProsodyMcpServerTest" time="0.062">
+    <system-out><![CDATA[✅ initialize: PASS
+]]></system-out>
+    <system-err><![CDATA[May 19, 2026 4:17:14 PM io.ecoskiller.prosody.config.ServerConfig load
+WARNING: PROSODY_JWT_SECRET not set — using insecure default (dev only!)
+May 19, 2026 4:17:14 PM io.ecoskiller.prosody.config.ServerConfig load
+INFO: Config loaded: domain=ecoskiller.io rateLimit=100/sec redis=false audit=true
+May 19, 2026 4:17:14 PM io.ecoskiller.prosody.server.ProsodyMcpServer <init>
+INFO: ProsodyMcpServer initialised — 14 agents loaded.
+[AUDIT] INFO | INITIALIZE | actor=server | MCP handshake | ts=2026-05-19T10:47:14.982164800Z
+]]></system-err>
+  </testcase>
+  <testcase name="testPing" classname="io.ecoskiller.prosody.ProsodyMcpServerTest" time="0.003">
+    <system-out><![CDATA[✅ ping: PASS
+]]></system-out>
+  </testcase>
+  <testcase name="testToolsList" classname="io.ecoskiller.prosody.ProsodyMcpServerTest" time="0.01">
+    <system-out><![CDATA[✅ tools/list: PASS — 14 agents registered
+]]></system-out>
+  </testcase>
+  <testcase name="testRoomCreate" classname="io.ecoskiller.prosody.ProsodyMcpServerTest" time="0.081">
+    <system-out><![CDATA[✅ xmpp_room_create: PASS
+]]></system-out>
+    <system-err><![CDATA[[AUDIT] INFO | TOOL_CALL | actor=test.jwt.token | xmpp_room_create | ts=2026-05-19T10:47:15.045722500Z
+[AUDIT] INFO | ROOM_CREATE | actor=system | Creating room: gd-12345 type=group_discussion participants=3 | ts=2026-05-19T10:47:15.106030200Z
+]]></system-err>
+  </testcase>
+  <testcase name="testRoomCreate_InvalidRoomId_Rejected" classname="io.ecoskiller.prosody.ProsodyMcpServerTest" time="0.006">
+    <system-out><![CDATA[✅ xmpp_room_create injection guard: PASS
+]]></system-out>
+    <system-err><![CDATA[[AUDIT] INFO | TOOL_CALL | actor=test.jwt.token | xmpp_room_create | ts=2026-05-19T10:47:15.116187900Z
+[AUDIT] ERROR | SECURITY_VIOLATION | actor=test.jwt.token | xmpp_room_create: Invalid room_id '<script>alert(1)</script>'. Must match: [a-zA... | ts=2026-05-19T10:47:15.119458900Z
+]]></system-err>
+  </testcase>
+  <testcase name="testParticipantJoin" classname="io.ecoskiller.prosody.ProsodyMcpServerTest" time="0.009">
+    <system-out><![CDATA[✅ xmpp_participant_join: PASS
+]]></system-out>
+    <system-err><![CDATA[[AUDIT] INFO | TOOL_CALL | actor=eyJhbGciOiJIUzI1... | xmpp_participant_join | ts=2026-05-19T10:47:15.122223300Z
+[AUDIT] INFO | PARTICIPANT_JOIN | actor=cand-001 | Joining room: gd-12345 role=candidate | ts=2026-05-19T10:47:15.122754800Z
+]]></system-err>
+  </testcase>
+  <testcase name="testParticipantJoin_InvalidRole_Rejected" classname="io.ecoskiller.prosody.ProsodyMcpServerTest" time="0.006">
+    <system-out><![CDATA[✅ xmpp_participant_join role validation: PASS
+]]></system-out>
+    <system-err><![CDATA[[AUDIT] INFO | TOOL_CALL | actor=test.token | xmpp_participant_join | ts=2026-05-19T10:47:15.133149400Z
+[AUDIT] ERROR | AGENT_ERROR | actor=test.token | xmpp_participant_join: Invalid value 'admin_hack' for field 'role'. Allowed: [ca... | ts=2026-05-19T10:47:15.136810900Z
+]]></system-err>
+  </testcase>
+  <testcase name="testPresenceUpdate" classname="io.ecoskiller.prosody.ProsodyMcpServerTest" time="0.012">
+    <system-out><![CDATA[✅ xmpp_presence_update: PASS
+]]></system-out>
+    <system-err><![CDATA[[AUDIT] INFO | TOOL_CALL | actor=test.token | xmpp_presence_update | ts=2026-05-19T10:47:15.140839700Z
+[AUDIT] INFO | PRESENCE_UPDATE | actor=cand-001 | Room=gd-12345 type=available speaking=true | ts=2026-05-19T10:47:15.142978300Z
+]]></system-err>
+  </testcase>
+  <testcase name="testSignalingRelay" classname="io.ecoskiller.prosody.ProsodyMcpServerTest" time="0.006">
+    <system-out><![CDATA[✅ xmpp_signaling_relay: PASS
+]]></system-out>
+    <system-err><![CDATA[[AUDIT] INFO | TOOL_CALL | actor=test.token | xmpp_signaling_relay | ts=2026-05-19T10:47:15.154272300Z
+[AUDIT] INFO | SIGNALING_RELAY | actor=cand-001 | Room=gd-12345 type=sdp_offer target=jitsi_bridge | ts=2026-05-19T10:47:15.155346400Z
+]]></system-err>
+  </testcase>
+  <testcase name="testSignalingRelay_OversizedPayload_Rejected" classname="io.ecoskiller.prosody.ProsodyMcpServerTest" time="0.009">
+    <system-out><![CDATA[✅ signaling payload size guard: PASS
+]]></system-out>
+    <system-err><![CDATA[[AUDIT] INFO | TOOL_CALL | actor=test.token | xmpp_signaling_relay | ts=2026-05-19T10:47:15.167846200Z
+[AUDIT] ERROR | SECURITY_VIOLATION | actor=test.token | xmpp_signaling_relay: Signaling payload exceeds 16KB limit | ts=2026-05-19T10:47:15.168358600Z
+]]></system-err>
+  </testcase>
+  <testcase name="testConnectionHealth" classname="io.ecoskiller.prosody.ProsodyMcpServerTest" time="0.007">
+    <system-out><![CDATA[✅ xmpp_connection_health: PASS
+]]></system-out>
+    <system-err><![CDATA[[AUDIT] INFO | TOOL_CALL | actor=test.token | xmpp_connection_health | ts=2026-05-19T10:47:15.172817200Z
+[AUDIT] INFO | HEALTH_CHECK | actor=system | type=full | ts=2026-05-19T10:47:15.175266300Z
+]]></system-err>
+  </testcase>
+  <testcase name="testKafkaEventEmit" classname="io.ecoskiller.prosody.ProsodyMcpServerTest" time="0.004">
+    <system-out><![CDATA[✅ xmpp_kafka_event_emit: PASS
+]]></system-out>
+    <system-err><![CDATA[[AUDIT] INFO | TOOL_CALL | actor=test.token | xmpp_kafka_event_emit | ts=2026-05-19T10:47:15.181240400Z
+[AUDIT] INFO | KAFKA_EMIT | actor=system | event=room.created room=gd-12345 | ts=2026-05-19T10:47:15.182422500Z
+]]></system-err>
+  </testcase>
+  <testcase name="testAuditLogQuery" classname="io.ecoskiller.prosody.ProsodyMcpServerTest" time="0.011">
+    <system-out><![CDATA[✅ xmpp_audit_log_query: PASS
+]]></system-out>
+    <system-err><![CDATA[[AUDIT] INFO | TOOL_CALL | actor=test.token | xmpp_audit_log_query | ts=2026-05-19T10:47:15.188573200Z
+[AUDIT] INFO | AUDIT_QUERY | actor=admin | filter=ALL user= severity=ALL | ts=2026-05-19T10:47:15.191482700Z
+]]></system-err>
+  </testcase>
+  <testcase name="testUnknownMethod" classname="io.ecoskiller.prosody.ProsodyMcpServerTest" time="0.003">
+    <system-out><![CDATA[✅ unknown method error: PASS
+]]></system-out>
+  </testcase>
+  <testcase name="testUnknownTool" classname="io.ecoskiller.prosody.ProsodyMcpServerTest" time="0.002">
+    <system-out><![CDATA[✅ unknown tool error: PASS
+]]></system-out>
+  </testcase>
+  <testcase name="testMalformedJson" classname="io.ecoskiller.prosody.ProsodyMcpServerTest" time="0.004">
+    <system-out><![CDATA[✅ malformed JSON error: PASS
+]]></system-out>
+  </testcase>
+  <testcase name="testMissingRequiredField" classname="io.ecoskiller.prosody.ProsodyMcpServerTest" time="0.003">
+    <system-out><![CDATA[✅ missing required field validation: PASS
+]]></system-out>
+    <system-err><![CDATA[[AUDIT] INFO | TOOL_CALL | actor=test.token | xmpp_room_create | ts=2026-05-19T10:47:15.213133600Z
+[AUDIT] ERROR | AGENT_ERROR | actor=test.token | xmpp_room_create: Required field 'room_id' is missing or empty | ts=2026-05-19T10:47:15.213133600Z
+]]></system-err>
+  </testcase>
+  <testcase name="testInjectionInToolName" classname="io.ecoskiller.prosody.ProsodyMcpServerTest" time="0.002">
+    <system-out><![CDATA[✅ tool name injection guard: PASS
+]]></system-out>
+    <system-err><![CDATA[[AUDIT] WARN | INVALID_TOOL_NAME | actor=unknown | ../../../etc/passwd | ts=2026-05-19T10:47:15.216852500Z
+]]></system-err>
+  </testcase>
+  <testcase name="testRateLimit" classname="io.ecoskiller.prosody.ProsodyMcpServerTest" time="0.001">
+    <system-out><![CDATA[✅ rate limiter integration: PASS
+]]></system-out>
+  </testcase>
+  <testcase name="testAllAgentsHaveDefinitions" classname="io.ecoskiller.prosody.ProsodyMcpServerTest" time="0.005">
+    <system-out><![CDATA[✅ all agent definitions complete: PASS
+]]></system-out>
+  </testcase>
+</testsuite>

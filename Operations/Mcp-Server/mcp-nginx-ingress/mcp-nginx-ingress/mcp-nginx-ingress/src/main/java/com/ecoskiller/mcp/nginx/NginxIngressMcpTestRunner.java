@@ -44,9 +44,9 @@ public class NginxIngressMcpTestRunner {
                 assert "2024-11-05".equals(result.get("protocolVersion")) : "Wrong protocol version";
             });
 
-            // ── 2. ping ─────────────────────────────────────────────────
-            test(stdin, stdout, "ping", buildRequest("ping", null, 2), resp ->
-                assert resp.containsKey("result") : "Ping failed");
+            test(stdin, stdout, "ping", buildRequest("ping", null, 2), resp -> {
+                assert resp.containsKey("result") : "Ping failed";
+            });
 
             // ── 3. tools/list ───────────────────────────────────────────
             test(stdin, stdout, "tools/list", buildRequest("tools/list", null, 3), resp -> {

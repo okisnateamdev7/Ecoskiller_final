@@ -61,7 +61,7 @@ public class TaxComplianceTool extends BaseTool {
                         .put("creator_id",        creatorId)
                         .put("jurisdiction",       jur)
                         .put("gross_amount",       grossBD.toPlainString())
-                        .put("withholding_rate",   rate.multiply(BigDecimal.valueOf(100)).toPlainString() + "%")
+                        .put("withholding_rate",   rate.multiply(BigDecimal.valueOf(100)).stripTrailingZeros().toPlainString() + "%")
                         .put("tax_withheld",       tax.toPlainString())
                         .put("net_payout",         net.toPlainString())
                         .put("currency",           currency)

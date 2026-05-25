@@ -54,28 +54,7 @@ public class RoyaltyLedgerMcpServer {
     }
 
     private void registerAgents() {
-        // Core IP & Royalty
-        agents.put("ip_register",               new IpRegisterAgent(config, audit));
-        agents.put("ip_details_get",            new IpDetailsGetAgent(config, audit));
-        agents.put("royalty_accrue",            new RoyaltyAccrueAgent(config, audit));
-        agents.put("ledger_entries_query",      new LedgerEntriesQueryAgent(config, audit));
-        agents.put("creator_balance_get",       new CreatorBalanceGetAgent(config, audit));
-        // Payout & Tax
-        agents.put("payout_request",            new PayoutRequestAgent(config, audit));
-        agents.put("payout_status_get",         new PayoutStatusGetAgent(config, audit));
-        agents.put("tax_compliance_calculate",  new TaxComplianceCalculateAgent(config, audit));
-        // Dispute & Split
-        agents.put("ip_challenge_submit",       new IpChallengeSubmitAgent(config, audit));
-        agents.put("split_config_manage",       new SplitConfigManageAgent(config, audit));
-        // Fraud & Tier
-        agents.put("fraud_detection_check",     new FraudDetectionCheckAgent(config, audit));
-        agents.put("creator_tier_manage",       new CreatorTierManageAgent(config, audit));
-        // Rate & Reporting
-        agents.put("royalty_rate_manage",       new RoyaltyRateManageAgent(config, audit));
-        agents.put("earnings_report",           new EarningsReportAgent(config, audit));
-        // Health & Audit
-        agents.put("service_health",            new ServiceHealthAgent(config, audit));
-        agents.put("audit_log_query",           new AuditLogQueryAgent(config, audit));
+        agents.putAll(AgentFactory.createAllAgents(config, audit));
     }
 
     // ── Main loop ────────────────────────────────────────────────────────────
@@ -93,7 +72,7 @@ public class RoyaltyLedgerMcpServer {
 
     // ── JSON-RPC dispatcher ──────────────────────────────────────────────────
 
-    String dispatch(String raw) {
+    public String dispatch(String raw) {
         JsonNode req;
         try { req = mapper.readTree(raw); }
         catch (Exception e) { return err(null, -32700, "Parse error: " + e.getMessage()); }
@@ -236,7 +215,7 @@ public class RoyaltyLedgerMcpServer {
         Logger root = Logger.getLogger(""); root.setLevel(Level.INFO);
         for (Handler h : root.getHandlers()) root.removeHandler(h);
         ConsoleHandler h = new ConsoleHandler();
-        h.setStream(System.err); h.setLevel(Level.ALL); h.setFormatter(new SimpleFormatter());
+        h.setLevel(Level.ALL); h.setFormatter(new SimpleFormatter());
         root.addHandler(h);
     }
 }

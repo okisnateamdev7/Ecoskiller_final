@@ -10,7 +10,7 @@ import java.time.Instant;
 // ═══════════════════════════════════════════════════════════════════════════════
 // AGENT 6 — RECRUITER_CANDIDATE_SAVE
 // ═══════════════════════════════════════════════════════════════════════════════
-public class RecruiterCandidateSaveAgent extends BaseAgent {
+class RecruiterCandidateSaveAgent extends BaseAgent {
     public RecruiterCandidateSaveAgent(ServerConfig c, AuditLogger a) { super(c, a); }
 
     @Override public JsonNode getToolDefinition() {
@@ -63,7 +63,7 @@ public class RecruiterCandidateSaveAgent extends BaseAgent {
 // ═══════════════════════════════════════════════════════════════════════════════
 // AGENT 7 — RECRUITER_SAVED_CANDIDATES_LIST
 // ═══════════════════════════════════════════════════════════════════════════════
-public class RecruiterSavedCandidatesListAgent extends BaseAgent {
+class RecruiterSavedCandidatesListAgent extends BaseAgent {
     public RecruiterSavedCandidatesListAgent(ServerConfig c, AuditLogger a) { super(c, a); }
 
     @Override public JsonNode getToolDefinition() {
@@ -113,7 +113,7 @@ public class RecruiterSavedCandidatesListAgent extends BaseAgent {
 // ═══════════════════════════════════════════════════════════════════════════════
 // AGENT 8 — RECRUITER_NOTIFICATIONS_GET
 // ═══════════════════════════════════════════════════════════════════════════════
-public class RecruiterNotificationsGetAgent extends BaseAgent {
+class RecruiterNotificationsGetAgent extends BaseAgent {
     public RecruiterNotificationsGetAgent(ServerConfig c, AuditLogger a) { super(c, a); }
 
     @Override public JsonNode getToolDefinition() {
@@ -162,7 +162,7 @@ public class RecruiterNotificationsGetAgent extends BaseAgent {
 // ═══════════════════════════════════════════════════════════════════════════════
 // AGENT 9 — RECRUITER_NOTIFICATION_MARK_READ
 // ═══════════════════════════════════════════════════════════════════════════════
-public class RecruiterNotificationMarkReadAgent extends BaseAgent {
+class RecruiterNotificationMarkReadAgent extends BaseAgent {
     public RecruiterNotificationMarkReadAgent(ServerConfig c, AuditLogger a) { super(c, a); }
 
     @Override public JsonNode getToolDefinition() {
@@ -209,7 +209,7 @@ public class RecruiterNotificationMarkReadAgent extends BaseAgent {
 // ═══════════════════════════════════════════════════════════════════════════════
 // AGENT 10 — RECRUITER_SUBSCRIPTION_GET
 // ═══════════════════════════════════════════════════════════════════════════════
-public class RecruiterSubscriptionGetAgent extends BaseAgent {
+class RecruiterSubscriptionGetAgent extends BaseAgent {
     public RecruiterSubscriptionGetAgent(ServerConfig c, AuditLogger a) { super(c, a); }
 
     @Override public JsonNode getToolDefinition() {

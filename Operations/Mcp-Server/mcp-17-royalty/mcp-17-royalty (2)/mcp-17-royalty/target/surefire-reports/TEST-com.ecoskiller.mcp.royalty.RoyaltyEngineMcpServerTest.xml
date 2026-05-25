@@ -1,0 +1,280 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report-3.0.xsd" version="3.0" name="com.ecoskiller.mcp.royalty.RoyaltyEngineMcpServerTest" time="0.439" tests="43" errors="0" skipped="0" failures="0">
+  <properties>
+    <property name="java.specification.version" value="21"/>
+    <property name="sun.cpu.isalist" value="amd64"/>
+    <property name="sun.jnu.encoding" value="Cp1252"/>
+    <property name="java.class.path" value="D:\Project\Ecoskiller\Operations\Mcp-Server\mcp-17-royalty\mcp-17-royalty (2)\mcp-17-royalty\target\test-classes;D:\Project\Ecoskiller\Operations\Mcp-Server\mcp-17-royalty\mcp-17-royalty (2)\mcp-17-royalty\target\classes;C:\Users\bljsr\.m2\repository\org\json\json\20240303\json-20240303.jar;C:\Users\bljsr\.m2\repository\org\junit\jupiter\junit-jupiter\5.10.2\junit-jupiter-5.10.2.jar;C:\Users\bljsr\.m2\repository\org\junit\jupiter\junit-jupiter-api\5.10.2\junit-jupiter-api-5.10.2.jar;C:\Users\bljsr\.m2\repository\org\opentest4j\opentest4j\1.3.0\opentest4j-1.3.0.jar;C:\Users\bljsr\.m2\repository\org\junit\platform\junit-platform-commons\1.10.2\junit-platform-commons-1.10.2.jar;C:\Users\bljsr\.m2\repository\org\apiguardian\apiguardian-api\1.1.2\apiguardian-api-1.1.2.jar;C:\Users\bljsr\.m2\repository\org\junit\jupiter\junit-jupiter-params\5.10.2\junit-jupiter-params-5.10.2.jar;C:\Users\bljsr\.m2\repository\org\junit\jupiter\junit-jupiter-engine\5.10.2\junit-jupiter-engine-5.10.2.jar;C:\Users\bljsr\.m2\repository\org\junit\platform\junit-platform-engine\1.10.2\junit-platform-engine-1.10.2.jar;"/>
+    <property name="java.vm.vendor" value="Oracle Corporation"/>
+    <property name="sun.arch.data.model" value="64"/>
+    <property name="user.variant" value=""/>
+    <property name="java.vendor.url" value="https://java.oracle.com/"/>
+    <property name="user.timezone" value="Asia/Calcutta"/>
+    <property name="os.name" value="Windows 11"/>
+    <property name="java.vm.specification.version" value="21"/>
+    <property name="sun.java.launcher" value="SUN_STANDARD"/>
+    <property name="user.country" value="US"/>
+    <property name="sun.boot.library.path" value="C:\Program Files\Java\jdk-21\bin"/>
+    <property name="sun.java.command" value="C:\Users\bljsr\AppData\Local\Temp\surefire14982726213814117806\surefirebooter-20260519162536439_3.jar C:\Users\bljsr\AppData\Local\Temp\surefire14982726213814117806 2026-05-19T16-25-36_214-jvmRun1 surefire-20260519162536439_1tmp surefire_0-20260519162536439_2tmp"/>
+    <property name="jdk.debug" value="release"/>
+    <property name="surefire.test.class.path" value="D:\Project\Ecoskiller\Operations\Mcp-Server\mcp-17-royalty\mcp-17-royalty (2)\mcp-17-royalty\target\test-classes;D:\Project\Ecoskiller\Operations\Mcp-Server\mcp-17-royalty\mcp-17-royalty (2)\mcp-17-royalty\target\classes;C:\Users\bljsr\.m2\repository\org\json\json\20240303\json-20240303.jar;C:\Users\bljsr\.m2\repository\org\junit\jupiter\junit-jupiter\5.10.2\junit-jupiter-5.10.2.jar;C:\Users\bljsr\.m2\repository\org\junit\jupiter\junit-jupiter-api\5.10.2\junit-jupiter-api-5.10.2.jar;C:\Users\bljsr\.m2\repository\org\opentest4j\opentest4j\1.3.0\opentest4j-1.3.0.jar;C:\Users\bljsr\.m2\repository\org\junit\platform\junit-platform-commons\1.10.2\junit-platform-commons-1.10.2.jar;C:\Users\bljsr\.m2\repository\org\apiguardian\apiguardian-api\1.1.2\apiguardian-api-1.1.2.jar;C:\Users\bljsr\.m2\repository\org\junit\jupiter\junit-jupiter-params\5.10.2\junit-jupiter-params-5.10.2.jar;C:\Users\bljsr\.m2\repository\org\junit\jupiter\junit-jupiter-engine\5.10.2\junit-jupiter-engine-5.10.2.jar;C:\Users\bljsr\.m2\repository\org\junit\platform\junit-platform-engine\1.10.2\junit-platform-engine-1.10.2.jar;"/>
+    <property name="sun.cpu.endian" value="little"/>
+    <property name="user.home" value="C:\Users\bljsr"/>
+    <property name="user.language" value="en"/>
+    <property name="java.specification.vendor" value="Oracle Corporation"/>
+    <property name="java.version.date" value="2025-10-21"/>
+    <property name="java.home" value="C:\Program Files\Java\jdk-21"/>
+    <property name="file.separator" value="\"/>
+    <property name="basedir" value="D:\Project\Ecoskiller\Operations\Mcp-Server\mcp-17-royalty\mcp-17-royalty (2)\mcp-17-royalty"/>
+    <property name="java.vm.compressedOopsMode" value="32-bit"/>
+    <property name="line.separator" value="&#10;"/>
+    <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
+    <property name="java.specification.name" value="Java Platform API Specification"/>
+    <property name="surefire.real.class.path" value="C:\Users\bljsr\AppData\Local\Temp\surefire14982726213814117806\surefirebooter-20260519162536439_3.jar"/>
+    <property name="AUDIT_LOG_PATH" value="/tmp/mcp17-test-audit.log"/>
+    <property name="user.script" value=""/>
+    <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
+    <property name="java.runtime.version" value="21.0.9+7-LTS-338"/>
+    <property name="user.name" value="Balaji Suryavanshi"/>
+    <property name="stdout.encoding" value="Cp1252"/>
+    <property name="path.separator" value=";"/>
+    <property name="ENV" value="test"/>
+    <property name="os.version" value="10.0"/>
+    <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
+    <property name="file.encoding" value="UTF-8"/>
+    <property name="java.vm.name" value="Java HotSpot(TM) 64-Bit Server VM"/>
+    <property name="localRepository" value="C:\Users\bljsr\.m2\repository"/>
+    <property name="java.vendor.url.bug" value="https://bugreport.java.com/bugreport/"/>
+    <property name="java.io.tmpdir" value="C:\Users\bljsr\AppData\Local\Temp\"/>
+    <property name="java.version" value="21.0.9"/>
+    <property name="user.dir" value="D:\Project\Ecoskiller\Operations\Mcp-Server\mcp-17-royalty\mcp-17-royalty (2)\mcp-17-royalty"/>
+    <property name="os.arch" value="amd64"/>
+    <property name="java.vm.specification.name" value="Java Virtual Machine Specification"/>
+    <property name="sun.os.patch.level" value=""/>
+    <property name="native.encoding" value="Cp1252"/>
+    <property name="java.library.path" value="C:\Program Files\Java\jdk-21\bin;C:\WINDOWS\Sun\Java\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\Python312\Scripts\;C:\Python312\;C:\Program Files\Common Files\Oracle\Java\javapath;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\Program Files\Java\jdk-21\bin;C:\Program Files\dotnet\;C:\Program Files\NVIDIA Corporation\NVIDIA app\NvDLISR;C:\Program Files\nodejs\;C:\ProgramData\chocolatey\bin;C:\Program Files\Microsoft SQL Server\150\Tools\Binn\;C:\Program Files\Microsoft SQL Server\Client SDK\ODBC\170\Tools\Binn\;C:\Users\bljsr\AppData\Local\Microsoft\WindowsApps;C:\Users\bljsr\AppData\Local\Programs\Microsoft VS Code\bin;C:\Users\bljsr\AppData\Roaming\npm;C:\Users\bljsr\.dotnet\tools;C:\flutter\bin;C:\Program Files\Docker\Docker\resources\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Program Files\Amazon\AWSCLIV2\;C:\Program Files\Git\cmd;C:\Program Files\GitHub CLI\;C:\Users\bljsr\.local\bin;C:\Users\bljsr\AppData\Local\Microsoft\WindowsApps;C:\Users\bljsr\AppData\Local\Programs\Microsoft VS Code\bin;C:\Users\bljsr\AppData\Roaming\npm;C:\Users\bljsr\.dotnet\tools;C:\Users\bljsr\AppData\Local\Programs\Ollama;C:\Users\bljsr\AppData\Local\Programs\Antigravity\bin;C:\Users\bljsr\AppData\Local\Programs\cursor\resources\app\bin;c:\Ecoskiller\maven_bin\bin;."/>
+    <property name="java.vm.info" value="mixed mode, sharing"/>
+    <property name="stderr.encoding" value="Cp1252"/>
+    <property name="java.vendor" value="Oracle Corporation"/>
+    <property name="java.vm.version" value="21.0.9+7-LTS-338"/>
+    <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
+    <property name="java.class.version" value="65.0"/>
+  </properties>
+  <testcase name="testInitialize" classname="com.ecoskiller.mcp.royalty.RoyaltyEngineMcpServerTest" time="0.06">
+    <system-err><![CDATA[May 19, 2026 4:25:37 PM com.ecoskiller.mcp.royalty.security.AuditLogger <init>
+WARNING: [Audit] Cannot open /tmp/mcp-17-royalty-audit.log: \tmp\mcp-17-royalty-audit.log (The system cannot find the path specified)
+{"ts":"2026-05-19T10:55:37.760566Z","event":"MCP_REQUEST","tool":"initialize","env":"dev"}
+May 19, 2026 4:25:37 PM com.ecoskiller.mcp.royalty.RoyaltyEngineMcpServer handleInit
+INFO: [MCP-17] Client initialized: null
+]]></system-err>
+  </testcase>
+  <testcase name="testPing" classname="com.ecoskiller.mcp.royalty.RoyaltyEngineMcpServerTest" time="0.004">
+    <system-err><![CDATA[{"ts":"2026-05-19T10:55:37.801747700Z","event":"MCP_REQUEST","tool":"ping","env":"dev"}
+]]></system-err>
+  </testcase>
+  <testcase name="testToolsListReturns18" classname="com.ecoskiller.mcp.royalty.RoyaltyEngineMcpServerTest" time="0.007">
+    <system-err><![CDATA[{"ts":"2026-05-19T10:55:37.807603500Z","event":"MCP_REQUEST","tool":"tools/list","env":"dev"}
+]]></system-err>
+  </testcase>
+  <testcase name="testAllToolsHaveNameDescSchema" classname="com.ecoskiller.mcp.royalty.RoyaltyEngineMcpServerTest" time="0.009">
+    <system-err><![CDATA[{"ts":"2026-05-19T10:55:37.816516100Z","event":"MCP_REQUEST","tool":"tools/list","env":"dev"}
+]]></system-err>
+  </testcase>
+  <testcase name="testUnknownMethodReturnsError" classname="com.ecoskiller.mcp.royalty.RoyaltyEngineMcpServerTest" time="0.002">
+    <system-err><![CDATA[{"ts":"2026-05-19T10:55:37.826449100Z","event":"MCP_REQUEST","tool":"unknown/xyz","env":"dev"}
+]]></system-err>
+  </testcase>
+  <testcase name="testUnknownToolReturnsError" classname="com.ecoskiller.mcp.royalty.RoyaltyEngineMcpServerTest" time="0.002">
+    <system-err><![CDATA[{"ts":"2026-05-19T10:55:37.829763Z","event":"MCP_REQUEST","tool":"tools/call","env":"dev"}
+]]></system-err>
+  </testcase>
+  <testcase name="testSecurity_PathTraversalCreatorId" classname="com.ecoskiller.mcp.royalty.RoyaltyEngineMcpServerTest" time="0.002">
+    <system-err><![CDATA[{"ts":"2026-05-19T10:55:37.832136700Z","event":"MCP_REQUEST","tool":"tools/call","env":"dev"}
+{"ts":"2026-05-19T10:55:37.834159100Z","event":"SECURITY_BLOCK","tool":"tax_compliance","env":"dev","detail":"Invalid creator_id '../../etc/passwd' — must match [a-zA-Z0-9\-_]{1,128}"}
+]]></system-err>
+  </testcase>
+  <testcase name="testSecurity_NegativeAmount" classname="com.ecoskiller.mcp.royalty.RoyaltyEngineMcpServerTest" time="0.005">
+    <system-err><![CDATA[{"ts":"2026-05-19T10:55:37.839596Z","event":"MCP_REQUEST","tool":"tools/call","env":"dev"}
+{"ts":"2026-05-19T10:55:37.840266500Z","event":"SECURITY_BLOCK","tool":"royalty_calculation","env":"dev","detail":"sales_amount cannot be negative"}
+]]></system-err>
+  </testcase>
+  <testcase name="testSecurity_InvalidRoyaltyRate" classname="com.ecoskiller.mcp.royalty.RoyaltyEngineMcpServerTest" time="0.006">
+    <system-err><![CDATA[{"ts":"2026-05-19T10:55:37.844087600Z","event":"MCP_REQUEST","tool":"tools/call","env":"dev"}
+{"ts":"2026-05-19T10:55:37.848463200Z","event":"SECURITY_BLOCK","tool":"royalty_calculation","env":"dev","detail":"royalty_rate must be 0.0–1.0, got: 2.5"}
+]]></system-err>
+  </testcase>
+  <testcase name="testSecurity_InvalidJurisdiction" classname="com.ecoskiller.mcp.royalty.RoyaltyEngineMcpServerTest" time="0.003">
+    <system-err><![CDATA[{"ts":"2026-05-19T10:55:37.851209100Z","event":"MCP_REQUEST","tool":"tools/call","env":"dev"}
+{"ts":"2026-05-19T10:55:37.851772400Z","event":"SECURITY_BLOCK","tool":"tax_compliance","env":"dev","detail":"Unknown jurisdiction: NARNIA"}
+]]></system-err>
+  </testcase>
+  <testcase name="testSecurity_InvalidPayoutMethod" classname="com.ecoskiller.mcp.royalty.RoyaltyEngineMcpServerTest" time="0.003">
+    <system-err><![CDATA[{"ts":"2026-05-19T10:55:37.857034100Z","event":"MCP_REQUEST","tool":"tools/call","env":"dev"}
+{"ts":"2026-05-19T10:55:37.857579600Z","event":"SECURITY_BLOCK","tool":"royalty_distribution","env":"dev","detail":"Unknown payout_method: BITCOIN_ATM"}
+]]></system-err>
+  </testcase>
+  <testcase name="testSecurity_XSSInDescription" classname="com.ecoskiller.mcp.royalty.RoyaltyEngineMcpServerTest" time="0.003">
+    <system-err><![CDATA[{"ts":"2026-05-19T10:55:37.859780900Z","event":"MCP_REQUEST","tool":"tools/call","env":"dev"}
+{"ts":"2026-05-19T10:55:37.860353800Z","event":"SECURITY_BLOCK","tool":"contract_lifecycle","env":"dev","detail":"Unsafe characters in field: description"}
+]]></system-err>
+  </testcase>
+  <testcase name="testSecurity_YearOutOfRange" classname="com.ecoskiller.mcp.royalty.RoyaltyEngineMcpServerTest" time="0.004">
+    <system-err><![CDATA[{"ts":"2026-05-19T10:55:37.863135600Z","event":"MCP_REQUEST","tool":"tools/call","env":"dev"}
+{"ts":"2026-05-19T10:55:37.864312500Z","event":"SECURITY_BLOCK","tool":"tax_compliance","env":"dev","detail":"year out of range: 1899"}
+]]></system-err>
+  </testcase>
+  <testcase name="testTaxCompliance_Calculate_India" classname="com.ecoskiller.mcp.royalty.RoyaltyEngineMcpServerTest" time="0.008">
+    <system-err><![CDATA[{"ts":"2026-05-19T10:55:37.868452100Z","event":"MCP_REQUEST","tool":"tools/call","env":"dev"}
+{"ts":"2026-05-19T10:55:37.873518300Z","event":"TOOL_OK","tool":"tax_compliance","env":"dev","subject":"creator-001"}
+]]></system-err>
+  </testcase>
+  <testcase name="testTaxCompliance_Calculate_US_NoSSN" classname="com.ecoskiller.mcp.royalty.RoyaltyEngineMcpServerTest" time="0.003">
+    <system-err><![CDATA[{"ts":"2026-05-19T10:55:37.876257800Z","event":"MCP_REQUEST","tool":"tools/call","env":"dev"}
+{"ts":"2026-05-19T10:55:37.877316500Z","event":"TOOL_OK","tool":"tax_compliance","env":"dev","subject":"creator-002"}
+]]></system-err>
+  </testcase>
+  <testcase name="testTaxCompliance_GenerateReport" classname="com.ecoskiller.mcp.royalty.RoyaltyEngineMcpServerTest" time="0.003">
+    <system-err><![CDATA[{"ts":"2026-05-19T10:55:37.882067400Z","event":"MCP_REQUEST","tool":"tools/call","env":"dev"}
+{"ts":"2026-05-19T10:55:37.882639900Z","event":"TOOL_OK","tool":"tax_compliance","env":"dev","subject":"creator-001"}
+]]></system-err>
+  </testcase>
+  <testcase name="testSchoolAutoCreation_EligibilityAdult" classname="com.ecoskiller.mcp.royalty.RoyaltyEngineMcpServerTest" time="0.003">
+    <system-err><![CDATA[{"ts":"2026-05-19T10:55:37.887625200Z","event":"MCP_REQUEST","tool":"tools/call","env":"dev"}
+{"ts":"2026-05-19T10:55:37.888202100Z","event":"TOOL_OK","tool":"school_auto_creation","env":"dev","subject":"creator-001"}
+]]></system-err>
+  </testcase>
+  <testcase name="testSchoolAutoCreation_MinorRequiresGuardian" classname="com.ecoskiller.mcp.royalty.RoyaltyEngineMcpServerTest" time="0.002">
+    <system-err><![CDATA[{"ts":"2026-05-19T10:55:37.890723800Z","event":"MCP_REQUEST","tool":"tools/call","env":"dev"}
+{"ts":"2026-05-19T10:55:37.891483300Z","event":"TOOL_OK","tool":"school_auto_creation","env":"dev","subject":"minor-001"}
+]]></system-err>
+  </testcase>
+  <testcase name="testRoyaltyWallet_GetBalance" classname="com.ecoskiller.mcp.royalty.RoyaltyEngineMcpServerTest" time="0.001">
+    <system-err><![CDATA[{"ts":"2026-05-19T10:55:37.894434600Z","event":"MCP_REQUEST","tool":"tools/call","env":"dev"}
+{"ts":"2026-05-19T10:55:37.894434600Z","event":"TOOL_OK","tool":"royalty_wallet","env":"dev","subject":"creator-001"}
+]]></system-err>
+  </testcase>
+  <testcase name="testRoyaltyWallet_CheckThreshold_BelowMin" classname="com.ecoskiller.mcp.royalty.RoyaltyEngineMcpServerTest" time="0.004">
+    <system-err><![CDATA[{"ts":"2026-05-19T10:55:37.897480700Z","event":"MCP_REQUEST","tool":"tools/call","env":"dev"}
+{"ts":"2026-05-19T10:55:37.899232800Z","event":"TOOL_OK","tool":"royalty_wallet","env":"dev","subject":"creator-001"}
+]]></system-err>
+  </testcase>
+  <testcase name="testRoyaltySystemUnified_FullCycle" classname="com.ecoskiller.mcp.royalty.RoyaltyEngineMcpServerTest" time="0.014">
+    <system-err><![CDATA[{"ts":"2026-05-19T10:55:37.904196900Z","event":"MCP_REQUEST","tool":"tools/call","env":"dev"}
+{"ts":"2026-05-19T10:55:37.914387300Z","event":"TOOL_OK","tool":"royalty_system_unified","env":"dev","subject":"creator-001"}
+]]></system-err>
+  </testcase>
+  <testcase name="testRoyaltySystemUnified_TrialBalance" classname="com.ecoskiller.mcp.royalty.RoyaltyEngineMcpServerTest" time="0.003">
+    <system-err><![CDATA[{"ts":"2026-05-19T10:55:37.918922700Z","event":"MCP_REQUEST","tool":"tools/call","env":"dev"}
+{"ts":"2026-05-19T10:55:37.919949400Z","event":"TOOL_OK","tool":"royalty_system_unified","env":"dev","subject":"creator-001"}
+]]></system-err>
+  </testcase>
+  <testcase name="testRoyaltyEscrow_HoldAndRelease" classname="com.ecoskiller.mcp.royalty.RoyaltyEngineMcpServerTest" time="0.011">
+    <system-err><![CDATA[{"ts":"2026-05-19T10:55:37.922764800Z","event":"MCP_REQUEST","tool":"tools/call","env":"dev"}
+{"ts":"2026-05-19T10:55:37.931324300Z","event":"TOOL_OK","tool":"royalty_escrow","env":"dev","subject":"creator-001"}
+{"ts":"2026-05-19T10:55:37.931867300Z","event":"MCP_REQUEST","tool":"tools/call","env":"dev"}
+{"ts":"2026-05-19T10:55:37.931867300Z","event":"TOOL_OK","tool":"royalty_escrow","env":"dev","subject":"creator-001"}
+]]></system-err>
+  </testcase>
+  <testcase name="testRoyaltyDistribution_InitiateACH" classname="com.ecoskiller.mcp.royalty.RoyaltyEngineMcpServerTest" time="0.003">
+    <system-err><![CDATA[{"ts":"2026-05-19T10:55:37.934548900Z","event":"MCP_REQUEST","tool":"tools/call","env":"dev"}
+{"ts":"2026-05-19T10:55:37.936023200Z","event":"TOOL_OK","tool":"royalty_distribution","env":"dev","subject":"creator-001"}
+]]></system-err>
+  </testcase>
+  <testcase name="testRoyaltyDistribution_GetMethods" classname="com.ecoskiller.mcp.royalty.RoyaltyEngineMcpServerTest" time="0.003">
+    <system-err><![CDATA[{"ts":"2026-05-19T10:55:37.939353100Z","event":"MCP_REQUEST","tool":"tools/call","env":"dev"}
+{"ts":"2026-05-19T10:55:37.940082500Z","event":"TOOL_OK","tool":"royalty_distribution","env":"dev","subject":"creator-001"}
+]]></system-err>
+  </testcase>
+  <testcase name="testRoyaltyCalculation_Tiered_400K" classname="com.ecoskiller.mcp.royalty.RoyaltyEngineMcpServerTest" time="0.004">
+    <system-err><![CDATA[{"ts":"2026-05-19T10:55:37.943652400Z","event":"MCP_REQUEST","tool":"tools/call","env":"dev"}
+{"ts":"2026-05-19T10:55:37.945408600Z","event":"TOOL_OK","tool":"royalty_calculation","env":"dev","subject":"creator-001"}
+]]></system-err>
+  </testcase>
+  <testcase name="testRoyaltyCalculation_Tiered_600K" classname="com.ecoskiller.mcp.royalty.RoyaltyEngineMcpServerTest" time="0.002">
+    <system-err><![CDATA[{"ts":"2026-05-19T10:55:37.949688200Z","event":"MCP_REQUEST","tool":"tools/call","env":"dev"}
+{"ts":"2026-05-19T10:55:37.950199300Z","event":"TOOL_OK","tool":"royalty_calculation","env":"dev","subject":"creator-001"}
+]]></system-err>
+  </testcase>
+  <testcase name="testRoyaltyCalculation_MinGuaranteeDeficiency" classname="com.ecoskiller.mcp.royalty.RoyaltyEngineMcpServerTest" time="0.003">
+    <system-err><![CDATA[{"ts":"2026-05-19T10:55:37.953448700Z","event":"MCP_REQUEST","tool":"tools/call","env":"dev"}
+{"ts":"2026-05-19T10:55:37.953448700Z","event":"TOOL_OK","tool":"royalty_calculation","env":"dev","subject":"creator-001"}
+]]></system-err>
+  </testcase>
+  <testcase name="testRoyaltyCalculation_CurrencyConvert" classname="com.ecoskiller.mcp.royalty.RoyaltyEngineMcpServerTest" time="0.005">
+    <system-err><![CDATA[{"ts":"2026-05-19T10:55:37.960040100Z","event":"MCP_REQUEST","tool":"tools/call","env":"dev"}
+{"ts":"2026-05-19T10:55:37.961715700Z","event":"TOOL_OK","tool":"royalty_calculation","env":"dev","subject":"creator-001"}
+]]></system-err>
+  </testcase>
+  <testcase name="testRevenueIngestion_Ingest" classname="com.ecoskiller.mcp.royalty.RoyaltyEngineMcpServerTest" time="0.005">
+    <system-err><![CDATA[{"ts":"2026-05-19T10:55:37.967589Z","event":"MCP_REQUEST","tool":"tools/call","env":"dev"}
+{"ts":"2026-05-19T10:55:37.968620300Z","event":"TOOL_OK","tool":"revenue_ingestion","env":"dev","subject":"creator-001"}
+]]></system-err>
+  </testcase>
+  <testcase name="testParentDashboard_GrantConsent_NoSignature" classname="com.ecoskiller.mcp.royalty.RoyaltyEngineMcpServerTest" time="0.003">
+    <system-err><![CDATA[{"ts":"2026-05-19T10:55:37.972104700Z","event":"MCP_REQUEST","tool":"tools/call","env":"dev"}
+{"ts":"2026-05-19T10:55:37.973628900Z","event":"TOOL_OK","tool":"parent_dashboard","env":"dev","subject":"minor-001"}
+]]></system-err>
+  </testcase>
+  <testcase name="testParentDashboard_GrantConsent_WithSignature" classname="com.ecoskiller.mcp.royalty.RoyaltyEngineMcpServerTest" time="0.003">
+    <system-err><![CDATA[{"ts":"2026-05-19T10:55:37.977054Z","event":"MCP_REQUEST","tool":"tools/call","env":"dev"}
+{"ts":"2026-05-19T10:55:37.977570100Z","event":"TOOL_OK","tool":"parent_dashboard","env":"dev","subject":"minor-001"}
+]]></system-err>
+  </testcase>
+  <testcase name="testMarketDemandPrediction_Forecast" classname="com.ecoskiller.mcp.royalty.RoyaltyEngineMcpServerTest" time="0.002">
+    <system-err><![CDATA[{"ts":"2026-05-19T10:55:37.984474500Z","event":"MCP_REQUEST","tool":"tools/call","env":"dev"}
+{"ts":"2026-05-19T10:55:37.984474500Z","event":"TOOL_OK","tool":"market_demand_prediction","env":"dev","subject":"idea-001"}
+]]></system-err>
+  </testcase>
+  <testcase name="testLicenseGeneration_Generate" classname="com.ecoskiller.mcp.royalty.RoyaltyEngineMcpServerTest" time="0.009">
+    <system-err><![CDATA[{"ts":"2026-05-19T10:55:37.987517600Z","event":"MCP_REQUEST","tool":"tools/call","env":"dev"}
+{"ts":"2026-05-19T10:55:37.994575900Z","event":"TOOL_OK","tool":"license_generation","env":"dev","subject":"creator-001"}
+]]></system-err>
+  </testcase>
+  <testcase name="testIdeaVisibilityControl_Set" classname="com.ecoskiller.mcp.royalty.RoyaltyEngineMcpServerTest" time="0.002">
+    <system-err><![CDATA[{"ts":"2026-05-19T10:55:37.997747900Z","event":"MCP_REQUEST","tool":"tools/call","env":"dev"}
+{"ts":"2026-05-19T10:55:37.997747900Z","event":"TOOL_OK","tool":"idea_visibility_control","env":"dev","subject":"creator-001"}
+]]></system-err>
+  </testcase>
+  <testcase name="testIdeaEvaluation_Tiered_Rate_Recommendation" classname="com.ecoskiller.mcp.royalty.RoyaltyEngineMcpServerTest" time="0.003">
+    <system-err><![CDATA[{"ts":"2026-05-19T10:55:38.000321900Z","event":"MCP_REQUEST","tool":"tools/call","env":"dev"}
+{"ts":"2026-05-19T10:55:38.001510100Z","event":"TOOL_OK","tool":"idea_evaluation","env":"dev","subject":"creator-001"}
+]]></system-err>
+  </testcase>
+  <testcase name="testDataRetentionPolicy_GetPolicy" classname="com.ecoskiller.mcp.royalty.RoyaltyEngineMcpServerTest" time="0.004">
+    <system-err><![CDATA[{"ts":"2026-05-19T10:55:38.005600700Z","event":"MCP_REQUEST","tool":"tools/call","env":"dev"}
+{"ts":"2026-05-19T10:55:38.006137900Z","event":"TOOL_OK","tool":"data_retention_policy","env":"dev","subject":"-"}
+]]></system-err>
+  </testcase>
+  <testcase name="testContractLifecycle_Transition_Terminate" classname="com.ecoskiller.mcp.royalty.RoyaltyEngineMcpServerTest" time="0.002">
+    <system-err><![CDATA[{"ts":"2026-05-19T10:55:38.010439200Z","event":"MCP_REQUEST","tool":"tools/call","env":"dev"}
+{"ts":"2026-05-19T10:55:38.010439200Z","event":"TOOL_OK","tool":"contract_lifecycle","env":"dev","subject":"-"}
+]]></system-err>
+  </testcase>
+  <testcase name="testAuditVerification_TrialBalance" classname="com.ecoskiller.mcp.royalty.RoyaltyEngineMcpServerTest" time="0.005">
+    <system-err><![CDATA[{"ts":"2026-05-19T10:55:38.014049200Z","event":"MCP_REQUEST","tool":"tools/call","env":"dev"}
+{"ts":"2026-05-19T10:55:38.014569300Z","event":"TOOL_OK","tool":"audit_verification","env":"dev","subject":"-"}
+]]></system-err>
+  </testcase>
+  <testcase name="testAuditVerification_FraudScan_LargeAmount" classname="com.ecoskiller.mcp.royalty.RoyaltyEngineMcpServerTest" time="0.001">
+    <system-err><![CDATA[{"ts":"2026-05-19T10:55:38.019581400Z","event":"MCP_REQUEST","tool":"tools/call","env":"dev"}
+{"ts":"2026-05-19T10:55:38.019581400Z","event":"TOOL_OK","tool":"audit_verification","env":"dev","subject":"creator-001"}
+]]></system-err>
+  </testcase>
+  <testcase name="testAuditVerification_FlagPayoutLargeAmount" classname="com.ecoskiller.mcp.royalty.RoyaltyEngineMcpServerTest" time="0.001">
+    <system-err><![CDATA[{"ts":"2026-05-19T10:55:38.023383200Z","event":"MCP_REQUEST","tool":"tools/call","env":"dev"}
+{"ts":"2026-05-19T10:55:38.023383200Z","event":"TOOL_OK","tool":"audit_verification","env":"dev","subject":"creator-001"}
+]]></system-err>
+  </testcase>
+  <testcase name="testBusinessMatching_Match" classname="com.ecoskiller.mcp.royalty.RoyaltyEngineMcpServerTest" time="0.003">
+    <system-err><![CDATA[{"ts":"2026-05-19T10:55:38.027417600Z","event":"MCP_REQUEST","tool":"tools/call","env":"dev"}
+{"ts":"2026-05-19T10:55:38.027417600Z","event":"TOOL_OK","tool":"business_matching","env":"dev","subject":"idea-001"}
+]]></system-err>
+  </testcase>
+  <testcase name="testCompetitionEngine_CreateAndDeclareWinners" classname="com.ecoskiller.mcp.royalty.RoyaltyEngineMcpServerTest" time="0.008">
+    <system-err><![CDATA[{"ts":"2026-05-19T10:55:38.029550100Z","event":"MCP_REQUEST","tool":"tools/call","env":"dev"}
+{"ts":"2026-05-19T10:55:38.034118900Z","event":"TOOL_OK","tool":"competition_engine","env":"dev","subject":"creator-001"}
+{"ts":"2026-05-19T10:55:38.035115900Z","event":"MCP_REQUEST","tool":"tools/call","env":"dev"}
+{"ts":"2026-05-19T10:55:38.035115900Z","event":"TOOL_OK","tool":"competition_engine","env":"dev","subject":"creator-001"}
+]]></system-err>
+  </testcase>
+</testsuite>

@@ -1,0 +1,62 @@
+server:
+  port: 8506                          # mcp-06 convention
+
+spring:
+  application:
+    name: mcp-06-corporate-erp
+
+mcp:
+  server:
+    id: mcp-06-corporate-erp
+    name: "Ecoskiller Corporate ERP MCP Server"
+    version: "1.0.0"
+    namespace: erp
+    category: CAT-06
+    priority: HIGH
+    description: >
+      Antigravity MCP Server for the Corporate ERP Suite.
+      Manages accounting, accounting-sync, assets, budgets, DMS,
+      ERP analytics, GST compliance, HRMS, ledger migration,
+      payroll, procurement, and regulatory filings.
+
+  tools:
+    accounting:
+      agent: ACCOUNTING_AGENT__ANTIGRAVITY_CORPORATE_ERP
+      sealed: true
+    accounting_sync:
+      agent: ACCOUNTING_SYNC_AGENT
+      sealed: false
+    asset:
+      agent: ASSET_AGENT_ANTIGRAVITY_ERP
+      sealed: true
+    budget:
+      agent: BUDGET_AGENT
+      sealed: false
+    dms:
+      agent: DMS_AGENT_ANTIGRAVITY_ERP
+      sealed: true
+    erp_analytics:
+      agent: ERP_ANALYTICS_AGENT
+      sealed: false
+    gst_connect:
+      agent: GST_CONNECT_AGENT
+      sealed: false
+    hrms:
+      agent: HRMS_AGENT_ANTIGRAVITY_SEALED
+      sealed: true
+    ledger_migration:
+      agent: LEDGER_MIGRATION_AGENT
+      sealed: false
+    payroll:
+      agent: PAYROLL_AGENT_ANTIGRAVITY_ERP
+      sealed: true
+    procurement:
+      agent: PROCUREMENT_AGENT_ANTIGRAVITY_ERP
+      sealed: true
+    regulatory:
+      agent: REGULATORY_AGENT_ANTIGRAVITY_ERP
+      sealed: true
+
+logging:
+  level:
+    com.ecoskiller.mcp: DEBUG

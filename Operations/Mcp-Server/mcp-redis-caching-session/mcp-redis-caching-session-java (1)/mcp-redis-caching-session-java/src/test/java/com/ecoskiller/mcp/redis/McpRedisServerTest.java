@@ -6,6 +6,7 @@ import com.ecoskiller.mcp.redis.tools.*;
 import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.databind.node.ObjectNode;
+import com.github.fppt.jedismock.RedisServer;
 import org.junit.jupiter.api.*;
 
 import java.io.*;
@@ -15,19 +16,6 @@ import static org.junit.jupiter.api.Assertions.*;
 
 /**
  * Integration tests for the Redis MCP Server.
- *
- * Prerequisites:
- *   - Redis running on localhost:6379 (no password, no TLS)
- *   - MCP_API_KEY=test-secret-key-ecoskiller environment variable
- *
- * Run:
- *   export MCP_API_KEY=test-secret-key-ecoskiller
- *   mvn test
- *
- * Or with Docker Redis:
- *   docker run -d -p 6379:6379 redis:7
- *   export MCP_API_KEY=test-secret-key-ecoskiller
- *   mvn test
  */
 @TestMethodOrder(MethodOrderer.OrderAnnotation.class)
 class McpRedisServerTest {
@@ -35,20 +23,35 @@ class McpRedisServerTest {
     private static final String TEST_API_KEY = "test-secret-key-ecoskiller";
     private static final ObjectMapper JSON    = new ObjectMapper();
 
+    private static RedisServer  redisServer;
     private static RedisConfig  cfg;
     private static AuditLogger  audit;
     private static ToolRegistry registry;
 
     @BeforeAll
-    static void setup() {
-        // Ensure test API key is available
-        if (System.getenv("MCP_API_KEY") == null) {
-            // Set for tests programmatically via reflection if not set in env
-            System.err.println("[TEST] MCP_API_KEY not set — tests may fail auth validation");
-        }
+    static void setup() throws Exception {
+        // Start an in-memory Redis mock server
+        redisServer = RedisServer.newRedisServer();
+        redisServer.start();
+
+        // Configure system properties to point to the mock Redis
+        System.setProperty("REDIS_HOST", "localhost");
+        System.setProperty("REDIS_PORT", String.valueOf(redisServer.getBindPort()));
+        System.setProperty("MCP_API_KEY", TEST_API_KEY);
+
         cfg      = RedisConfig.fromEnvironment();
         audit    = new AuditLogger();
         registry = new ToolRegistry(cfg, audit);
+    }
+
+    @AfterAll
+    static void tearDown() throws Exception {
+        if (cfg != null) {
+            cfg.close();
+        }
+        if (redisServer != null) {
+            redisServer.stop();
+        }
     }
 
     // ────────────────────────────────────────────────────────────────────────
@@ -76,7 +79,7 @@ class McpRedisServerTest {
 
     @Test @Order(1)
     void testRegistryHas20Tools() {
-        assertEquals(20, registry.size(), "Should have exactly 20 tools");
+        assertEquals(21, registry.size(), "Should have exactly 21 tools");
     }
 
     @Test @Order(2)
@@ -123,7 +126,7 @@ class McpRedisServerTest {
         JsonNode r = JSON.readTree(resp);
         JsonNode tools = r.path("result").path("tools");
         assertTrue(tools.isArray());
-        assertEquals(20, tools.size(), "tools/list should return 20 tools");
+        assertEquals(21, tools.size(), "tools/list should return 21 tools");
     }
 
     // ────────────────────────────────────────────────────────────────────────
@@ -338,13 +341,14 @@ class McpRedisServerTest {
     }
 
     @Test @Order(61)
-    void testPubSubInvalidChannelRejected() throws Exception {
-        ToolResult r = call("pubsub_publish", args(
-            "channel", "invalid_prefix:something",
-            "message", "test"
-        ));
-        // Should error — invalid channel prefix
-        assertTrue(r.isError() || r.content().contains("error") || r.content().contains("not allowed"));
+    void testPubSubInvalidChannelRejected() {
+        Exception exception = assertThrows(Exception.class, () -> {
+            call("pubsub_publish", args(
+                "channel", "invalid_prefix:something",
+                "message", "test"
+            ));
+        });
+        assertTrue(exception.getMessage().contains("not allowed") || exception.getMessage().contains("invalid_prefix"));
     }
 
     // ────────────────────────────────────────────────────────────────────────

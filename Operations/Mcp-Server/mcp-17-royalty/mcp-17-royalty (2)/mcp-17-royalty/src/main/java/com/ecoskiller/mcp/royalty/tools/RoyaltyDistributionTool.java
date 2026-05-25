@@ -75,8 +75,8 @@ public class RoyaltyDistributionTool extends BaseTool {
                         .put("status",              "PROCESSING")
                         .put("payout_method",       "BANK_TRANSFER")
                         .put("created_at",          now())
-                        .put("completed_at",        null)
-                        .put("confirmation_number", null)
+                        .put("completed_at",        JSONObject.NULL)
+                        .put("confirmation_number", JSONObject.NULL)
                         .put("note",                "Fetch live status from payment-gateway-service"));
             }
             case "batch" -> {

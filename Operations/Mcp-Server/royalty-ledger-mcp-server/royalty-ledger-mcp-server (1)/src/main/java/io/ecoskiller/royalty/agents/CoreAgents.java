@@ -15,7 +15,7 @@ import java.time.Instant;
  * Multi-contributor co-creation: supply split_config JSON.
  * Writes to PostgreSQL ip_registry table + ClickHouse audit entry.
  */
-public class IpRegisterAgent extends BaseAgent {
+class IpRegisterAgent extends BaseAgent {
     public IpRegisterAgent(ServerConfig c, AuditLogger a) { super(c, a); }
 
     @Override public JsonNode getToolDefinition() {
@@ -77,7 +77,7 @@ public class IpRegisterAgent extends BaseAgent {
         res.put("title",          title);
         res.put("content_hash",   contentHash);
         res.put("royalty_rate",   royaltyRate);
-        res.put("status",         "registered");
+        res.put("status_value",   "registered");
         res.put("registered_at",  Instant.now().toString());
         res.put("expiry_date",    Instant.now().plusSeconds(90*86400L).toString());
         res.put("signature_algorithm", signature.startsWith("ed25519:") ? "Ed25519" : "RSA-2048");
@@ -109,7 +109,7 @@ public class IpRegisterAgent extends BaseAgent {
 // ═══════════════════════════════════════════════════════════════════════════════
 // AGENT 2 — IP_DETAILS_GET
 // ═══════════════════════════════════════════════════════════════════════════════
-public class IpDetailsGetAgent extends BaseAgent {
+class IpDetailsGetAgent extends BaseAgent {
     public IpDetailsGetAgent(ServerConfig c, AuditLogger a) { super(c, a); }
 
     @Override public JsonNode getToolDefinition() {
@@ -168,7 +168,7 @@ public class IpDetailsGetAgent extends BaseAgent {
  * Writes double-entry ledger to ClickHouse: debit creator_balance, credit platform_earnings.
  * Detects self-submission fraud and velocity fraud before accruing.
  */
-public class RoyaltyAccrueAgent extends BaseAgent {
+class RoyaltyAccrueAgent extends BaseAgent {
     public RoyaltyAccrueAgent(ServerConfig c, AuditLogger a) { super(c, a); }
 
     @Override public JsonNode getToolDefinition() {
@@ -302,7 +302,7 @@ public class RoyaltyAccrueAgent extends BaseAgent {
 // ═══════════════════════════════════════════════════════════════════════════════
 // AGENT 4 — LEDGER_ENTRIES_QUERY
 // ═══════════════════════════════════════════════════════════════════════════════
-public class LedgerEntriesQueryAgent extends BaseAgent {
+class LedgerEntriesQueryAgent extends BaseAgent {
     public LedgerEntriesQueryAgent(ServerConfig c, AuditLogger a) { super(c, a); }
 
     @Override public JsonNode getToolDefinition() {
@@ -373,7 +373,7 @@ public class LedgerEntriesQueryAgent extends BaseAgent {
 // ═══════════════════════════════════════════════════════════════════════════════
 // AGENT 5 — CREATOR_BALANCE_GET
 // ═══════════════════════════════════════════════════════════════════════════════
-public class CreatorBalanceGetAgent extends BaseAgent {
+class CreatorBalanceGetAgent extends BaseAgent {
     public CreatorBalanceGetAgent(ServerConfig c, AuditLogger a) { super(c, a); }
 
     @Override public JsonNode getToolDefinition() {

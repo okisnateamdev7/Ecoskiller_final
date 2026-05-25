@@ -9,7 +9,7 @@ import java.time.Instant;
 // ═══════════════════════════════════════════════════════════════════════════════
 // AGENT 11 — FRAUD_DETECTION_CHECK
 // ═══════════════════════════════════════════════════════════════════════════════
-public class FraudDetectionCheckAgent extends BaseAgent {
+class FraudDetectionCheckAgent extends BaseAgent {
     public FraudDetectionCheckAgent(ServerConfig c, AuditLogger a) { super(c, a); }
 
     @Override public JsonNode getToolDefinition() {
@@ -109,7 +109,7 @@ public class FraudDetectionCheckAgent extends BaseAgent {
 // ═══════════════════════════════════════════════════════════════════════════════
 // AGENT 12 — CREATOR_TIER_MANAGE
 // ═══════════════════════════════════════════════════════════════════════════════
-public class CreatorTierManageAgent extends BaseAgent {
+class CreatorTierManageAgent extends BaseAgent {
     public CreatorTierManageAgent(ServerConfig c, AuditLogger a) { super(c, a); }
 
     @Override public JsonNode getToolDefinition() {
@@ -185,7 +185,7 @@ public class CreatorTierManageAgent extends BaseAgent {
 // ═══════════════════════════════════════════════════════════════════════════════
 // AGENT 13 — ROYALTY_RATE_MANAGE
 // ═══════════════════════════════════════════════════════════════════════════════
-public class RoyaltyRateManageAgent extends BaseAgent {
+class RoyaltyRateManageAgent extends BaseAgent {
     public RoyaltyRateManageAgent(ServerConfig c, AuditLogger a) { super(c, a); }
 
     @Override public JsonNode getToolDefinition() {
@@ -251,7 +251,7 @@ public class RoyaltyRateManageAgent extends BaseAgent {
 // ═══════════════════════════════════════════════════════════════════════════════
 // AGENT 14 — EARNINGS_REPORT
 // ═══════════════════════════════════════════════════════════════════════════════
-public class EarningsReportAgent extends BaseAgent {
+class EarningsReportAgent extends BaseAgent {
     public EarningsReportAgent(ServerConfig c, AuditLogger a) { super(c, a); }
 
     @Override public JsonNode getToolDefinition() {
@@ -331,7 +331,7 @@ public class EarningsReportAgent extends BaseAgent {
 // ═══════════════════════════════════════════════════════════════════════════════
 // AGENT 15 — SERVICE_HEALTH
 // ═══════════════════════════════════════════════════════════════════════════════
-public class ServiceHealthAgent extends BaseAgent {
+class ServiceHealthAgent extends BaseAgent {
     public ServiceHealthAgent(ServerConfig c, AuditLogger a) { super(c, a); }
 
     @Override public JsonNode getToolDefinition() {
@@ -388,7 +388,7 @@ public class ServiceHealthAgent extends BaseAgent {
 // ═══════════════════════════════════════════════════════════════════════════════
 // AGENT 16 — AUDIT_LOG_QUERY
 // ═══════════════════════════════════════════════════════════════════════════════
-public class AuditLogQueryAgent extends BaseAgent {
+class AuditLogQueryAgent extends BaseAgent {
     public AuditLogQueryAgent(ServerConfig c, AuditLogger a) { super(c, a); }
 
     @Override public JsonNode getToolDefinition() {

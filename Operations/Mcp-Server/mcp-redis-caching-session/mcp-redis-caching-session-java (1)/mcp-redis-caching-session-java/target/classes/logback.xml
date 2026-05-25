@@ -1,0 +1,44 @@
+<configuration>
+
+    <!-- ═══════════════════════════════════════════════════════════════════
+         Ecoskiller — Redis MCP Server Logging Configuration
+         
+         Strategy:
+           - All application logs → stderr  (MCP uses stdout for JSON-RPC)
+           - AUDIT logger        → stderr with [AUDIT] prefix (Wazuh ingest)
+           - Log level           → INFO by default, DEBUG via LOG_LEVEL env
+         ════════════════════════════════════════════════════════════════ -->
+
+    <!-- Console appender writes to STDERR — never stdout (reserved for JSON-RPC) -->
+    <appender name="STDERR" class="ch.qos.logback.core.ConsoleAppender">
+        <target>System.err</target>
+        <encoder>
+            <pattern>%d{yyyy-MM-dd HH:mm:ss.SSS} [%thread] %-5level %logger{36} - %msg%n</pattern>
+        </encoder>
+    </appender>
+
+    <!-- Dedicated AUDIT appender — structured for Wazuh SIEM ingestion -->
+    <appender name="AUDIT_STDERR" class="ch.qos.logback.core.ConsoleAppender">
+        <target>System.err</target>
+        <encoder>
+            <pattern>[AUDIT] %msg%n</pattern>
+        </encoder>
+    </appender>
+
+    <!-- Audit logger — all security events go here -->
+    <logger name="AUDIT" level="INFO" additivity="false">
+        <appender-ref ref="AUDIT_STDERR"/>
+    </logger>
+
+    <!-- Jedis / connection pool — reduce noise -->
+    <logger name="redis.clients" level="WARN"/>
+    <logger name="org.apache.commons.pool2" level="WARN"/>
+
+    <!-- MCP server — configurable via LOG_LEVEL env -->
+    <logger name="com.ecoskiller.mcp" level="${LOG_LEVEL:-INFO}"/>
+
+    <root level="WARN">
+        <appender-ref ref="STDERR"/>
+    </root>
+
+</configuration>

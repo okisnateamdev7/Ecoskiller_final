@@ -1,0 +1,5 @@
+# Created at 2026-05-19T16:25:36.499
+Boot Manifest-JAR contains absolute paths in classpath 'D:\Project\Ecoskiller\Operations\Mcp-Server\mcp-17-royalty\mcp-17-royalty (2)\mcp-17-royalty\target\test-classes'
+Hint: <argLine>-Djdk.net.URLClassPath.disableClassPathURLCheck=true</argLine>
+'other' has different root
+

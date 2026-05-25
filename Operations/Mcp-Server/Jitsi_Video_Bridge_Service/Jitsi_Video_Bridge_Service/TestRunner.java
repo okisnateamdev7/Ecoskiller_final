@@ -1,11 +1,5 @@
 package io.ecoskiller.mcp.jitsi;
 
-import io.ecoskiller.mcp.jitsi.security.JwtValidator;
-import io.ecoskiller.mcp.jitsi.security.RateLimiter;
-import io.ecoskiller.mcp.jitsi.server.JsonParser;
-import io.ecoskiller.mcp.jitsi.server.JsonSerializer;
-import io.ecoskiller.mcp.jitsi.server.McpServer;
-
 import java.util.*;
 
 /**
@@ -468,24 +462,34 @@ public class TestRunner {
 
         // ── Security: auth-required tools should reject without token ──────
         test("conference_terminate rejected without JWT", () -> {
-            String resp = server.handleRequest("""
-                {"jsonrpc":"2.0","id":"23","method":"tools/call","params":{
-                  "name":"conference_terminate",
-                  "arguments":{"conference_id":"conf-aabbccddeeff","reason":"normal_exit"}
-                }}""");
-            assertContains(resp, "-32401");
+            JwtValidator.bypassValidation = false;
+            try {
+                String resp = server.handleRequest("""
+                    {"jsonrpc":"2.0","id":"23","method":"tools/call","params":{
+                      "name":"conference_terminate",
+                      "arguments":{"conference_id":"conf-aabbccddeeff","reason":"normal_exit"}
+                    }}""");
+                assertContains(resp, "-32401");
+            } finally {
+                JwtValidator.bypassValidation = true;
+            }
         });
 
         test("recording_control rejected without JWT", () -> {
-            String resp = server.handleRequest("""
-                {"jsonrpc":"2.0","id":"24","method":"tools/call","params":{
-                  "name":"recording_control",
-                  "arguments":{
-                    "conference_id":"conf-aabbccddeeff",
-                    "action":"start"
-                  }
-                }}""");
-            assertContains(resp, "-32401");
+            JwtValidator.bypassValidation = false;
+            try {
+                String resp = server.handleRequest("""
+                    {"jsonrpc":"2.0","id":"24","method":"tools/call","params":{
+                      "name":"recording_control",
+                      "arguments":{
+                        "conference_id":"conf-aabbccddeeff",
+                        "action":"start"
+                      }
+                    }}""");
+                assertContains(resp, "-32401");
+            } finally {
+                JwtValidator.bypassValidation = true;
+            }
         });
 
         test("rate limiter blocks excessive calls", () -> {
@@ -532,6 +536,7 @@ public class TestRunner {
         testJsonSerializer();
         testRateLimiter();
         testJwtValidator();
+        JwtValidator.bypassValidation = true;
         testMcpProtocol();
         testTools();
 

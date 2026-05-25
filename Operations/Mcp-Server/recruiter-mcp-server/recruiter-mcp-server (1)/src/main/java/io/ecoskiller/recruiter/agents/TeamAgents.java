@@ -10,7 +10,7 @@ import java.time.Instant;
 // ═══════════════════════════════════════════════════════════════════════════════
 // AGENT 11 — RECRUITER_TEAM_GET
 // ═══════════════════════════════════════════════════════════════════════════════
-public class RecruiterTeamGetAgent extends BaseAgent {
+class RecruiterTeamGetAgent extends BaseAgent {
     public RecruiterTeamGetAgent(ServerConfig c, AuditLogger a) { super(c, a); }
 
     @Override public JsonNode getToolDefinition() {
@@ -54,7 +54,7 @@ public class RecruiterTeamGetAgent extends BaseAgent {
 // ═══════════════════════════════════════════════════════════════════════════════
 // AGENT 12 — RECRUITER_TEAM_INVITE
 // ═══════════════════════════════════════════════════════════════════════════════
-public class RecruiterTeamInviteAgent extends BaseAgent {
+class RecruiterTeamInviteAgent extends BaseAgent {
     public RecruiterTeamInviteAgent(ServerConfig c, AuditLogger a) { super(c, a); }
 
     @Override public JsonNode getToolDefinition() {
@@ -123,7 +123,7 @@ public class RecruiterTeamInviteAgent extends BaseAgent {
 // ═══════════════════════════════════════════════════════════════════════════════
 // AGENT 13 — RECRUITER_TEAM_REMOVE
 // ═══════════════════════════════════════════════════════════════════════════════
-public class RecruiterTeamRemoveAgent extends BaseAgent {
+class RecruiterTeamRemoveAgent extends BaseAgent {
     public RecruiterTeamRemoveAgent(ServerConfig c, AuditLogger a) { super(c, a); }
 
     @Override public JsonNode getToolDefinition() {
@@ -170,7 +170,7 @@ public class RecruiterTeamRemoveAgent extends BaseAgent {
 // ═══════════════════════════════════════════════════════════════════════════════
 // AGENT 14 — RECRUITER_SUBSCRIPTION_UPGRADE
 // ═══════════════════════════════════════════════════════════════════════════════
-public class RecruiterSubscriptionUpgradeAgent extends BaseAgent {
+class RecruiterSubscriptionUpgradeAgent extends BaseAgent {
     public RecruiterSubscriptionUpgradeAgent(ServerConfig c, AuditLogger a) { super(c, a); }
 
     @Override public JsonNode getToolDefinition() {
@@ -229,7 +229,7 @@ public class RecruiterSubscriptionUpgradeAgent extends BaseAgent {
 // ═══════════════════════════════════════════════════════════════════════════════
 // AGENT 15 — RECRUITER_SUBSCRIPTION_CANCEL
 // ═══════════════════════════════════════════════════════════════════════════════
-public class RecruiterSubscriptionCancelAgent extends BaseAgent {
+class RecruiterSubscriptionCancelAgent extends BaseAgent {
     public RecruiterSubscriptionCancelAgent(ServerConfig c, AuditLogger a) { super(c, a); }
 
     @Override public JsonNode getToolDefinition() {

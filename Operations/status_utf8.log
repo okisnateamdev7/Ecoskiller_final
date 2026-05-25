@@ -1,0 +1,27 @@
+Sending check-status command via SSM...
+Command sent successfully. Command ID: 8f32cb7f-63b8-44a4-a3bf-962729e7e23b
+Waiting for status results...
+[1] Status: Success
+
+================= STDOUT =================
+=== NAMESPACES ===
+NAME              STATUS        AGE
+cert-manager      Terminating   3d16h
+default           Active        9d
+kube-node-lease   Active        9d
+kube-public       Active        9d
+kube-system       Active        9d
+portainer         Active        3d16h
+shared-infra      Terminating   3d3h
+=== ALL PODS ===
+NAMESPACE     NAME                                                         READY   STATUS              RESTARTS   AGE
+kube-system   coredns-c4dbffb5f-8pdc4                                      0/1     Completed           0          2d20h
+kube-system   helper-pod-delete-pvc-caf0da7b-0958-4d00-8cdc-10d224da626c   0/1     Completed           0          16s
+kube-system   local-path-provisioner-5c4dc5d66d-mgkjg                      0/1     CrashLoopBackOff    0          2d20h
+kube-system   metrics-server-786d997795-jm72f                              0/1     CrashLoopBackOff    0          2d20h
+kube-system   svclb-traefik-976f04d9-5ll9f                                 0/2     RunContainerError   0          9d
+kube-system   traefik-9bcdbbd9-764vc                                       0/1     CrashLoopBackOff    0          2d20h
+portainer     portainer-5f88b8f48d-qnfql                                   1/1     Running             0          2d20h
+
+================= STDERR =================
+

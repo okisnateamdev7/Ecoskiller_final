@@ -9,10 +9,6 @@ import io.ecoskiller.royalty.security.AuditLogger;
 import java.time.Instant;
 import java.util.UUID;
 
-public interface AgentHandler {
-    JsonNode getToolDefinition();
-    JsonNode execute(JsonNode args) throws Exception;
-}
 
 abstract class BaseAgent implements AgentHandler {
 

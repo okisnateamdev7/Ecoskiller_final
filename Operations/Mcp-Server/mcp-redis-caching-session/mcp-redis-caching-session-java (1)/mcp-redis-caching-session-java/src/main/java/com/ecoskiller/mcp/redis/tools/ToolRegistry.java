@@ -6,7 +6,7 @@ import com.ecoskiller.mcp.redis.security.AuditLogger;
 import java.util.*;
 
 /**
- * Central registry for all 20 Redis MCP tools.
+ * Central registry for all 21 Redis MCP tools.
  *
  * Tool categories:
  *   Cache Operations    (5) : cache_get, cache_set, cache_delete, cache_mget, cache_flush_namespace
@@ -18,7 +18,7 @@ import java.util.*;
  *   Distributed Locks   (2) : lock_acquire, lock_release
  *   Monitoring          (1) : redis_health
  *                    ─────
- *   Total              20 tools
+ *   Total              21 tools
  */
 public class ToolRegistry {
 

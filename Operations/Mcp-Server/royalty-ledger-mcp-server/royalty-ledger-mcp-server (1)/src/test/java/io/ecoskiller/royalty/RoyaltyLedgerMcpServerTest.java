@@ -5,6 +5,7 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 import io.ecoskiller.royalty.server.RoyaltyLedgerMcpServer;
 import org.junit.jupiter.api.*;
 import static org.junit.jupiter.api.Assertions.*;
+import java.util.Set;
 
 /**
  * Test suite for Ecoskiller Royalty Ledger MCP Server.
@@ -70,7 +71,7 @@ public class RoyaltyLedgerMcpServerTest {
         assertTrue(c.get("ip_id").asText().startsWith("ip-"));
         assertEquals("problem", c.get("ip_type").asText());
         assertEquals(5.0, c.get("royalty_rate").asDouble());
-        assertEquals("registered", c.get("status_value", c.get("status")).asText(), "status check");
+        assertEquals("registered", c.get("status_value").asText(), "status check");
         assertNotNull(c.get("registered_at"));
         System.out.println("✅ ip_register: PASS");
     }
@@ -239,7 +240,7 @@ public class RoyaltyLedgerMcpServerTest {
         JsonNode c = content(resp);
         assertEquals("success", c.get("status").asText());
         assertTrue(c.get("dispute_id").asText().startsWith("disp-"));
-        assertEquals("pending", c.get("status_field", mapper.createObjectNode().put("x","pending")).get("x").asText());
+        assertEquals("pending", c.get("status_field").asText());
         assertEquals("IP.ownership_disputed", c.get("kafka_event").get("event_type").asText());
         System.out.println("✅ ip_challenge_submit: PASS");
     }
@@ -303,12 +304,13 @@ public class RoyaltyLedgerMcpServerTest {
               "arguments":{
                 "operation":"propose_adjustment","ip_id":"ip-co-created",
                 "requester_id":"cre-A",
-                "new_splits":"{\"cre-A\":50,\"cre-B\":50}",
+                "new_splits":"{\\"cre-A\\":50,\\"cre-B\\":50}",
                 "jwt_token":"t"}}}""");
+        System.out.println("DEBUG split_config_manage response: " + resp);
         JsonNode c = content(resp);
         assertEquals("success", c.get("status").asText());
         assertTrue(c.get("adjustment_id").asText().startsWith("adj-"));
-        assertEquals("pending_contributor_approval", c.get("status_field", mapper.createObjectNode().put("x","pending_contributor_approval")).get("x").asText());
+        assertEquals("pending_contributor_approval", c.get("status_field").asText());
         System.out.println("✅ split_config_manage: PASS");
     }
 

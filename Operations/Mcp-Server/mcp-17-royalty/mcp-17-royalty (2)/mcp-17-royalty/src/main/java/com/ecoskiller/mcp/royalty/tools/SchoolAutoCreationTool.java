@@ -83,7 +83,7 @@ public class SchoolAutoCreationTool extends BaseTool {
                         .put("guardian_id",    guardianId)
                         .put("relationship",   "PARENT_GUARDIAN")
                         .put("consent_status", "PENDING")
-                        .put("signed_date",    null)
+                        .put("signed_date",    JSONObject.NULL)
                         .put("action_required","Send consent request to guardian: " + guardianId)
                         .put("compliance_note","Required for child labor law compliance (Section 3 spec)")
                         .put("timestamp",      now());

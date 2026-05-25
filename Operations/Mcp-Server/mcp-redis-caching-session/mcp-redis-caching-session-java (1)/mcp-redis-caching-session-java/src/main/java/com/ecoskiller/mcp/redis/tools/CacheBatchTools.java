@@ -152,8 +152,8 @@ class CacheFlushNamespaceTool extends BaseTool {
             // Use SCAN to avoid blocking Redis with KEYS on large keyspaces
             String cursor = "0";
             do {
-                redis.clients.jedis.ScanResult<String> result = j.scan(cursor,
-                        new redis.clients.jedis.ScanParams().match(pattern).count(100));
+                redis.clients.jedis.resps.ScanResult<String> result = j.scan(cursor,
+                        new redis.clients.jedis.params.ScanParams().match(pattern).count(100));
                 cursor = result.getCursor();
                 List<String> batch = result.getResult();
                 if (!batch.isEmpty()) {

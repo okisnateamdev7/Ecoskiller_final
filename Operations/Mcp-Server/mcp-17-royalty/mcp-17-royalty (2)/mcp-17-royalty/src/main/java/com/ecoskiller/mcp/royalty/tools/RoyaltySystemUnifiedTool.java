@@ -83,7 +83,7 @@ public class RoyaltySystemUnifiedTool extends BaseTool {
                         .put("min_guarantee_quarter", minBD.toPlainString())
                         .put("deficiency",          deficit.toPlainString())
                         .put("final_royalty",       finalRoyalty.toPlainString())
-                        .put("withholding_rate",    rate.multiply(java.math.BigDecimal.valueOf(100)).toPlainString()+"%")
+                        .put("withholding_rate",    rate.multiply(java.math.BigDecimal.valueOf(100)).stripTrailingZeros().toPlainString()+"%")
                         .put("tax_withheld",        tax.toPlainString())
                         .put("net_payout",          netPay.toPlainString())
                         .put("payout_status",       "QUEUED")

@@ -1,7 +1,6 @@
 package com.ecoskiller.mcp.jitsi.server;
 
 import com.ecoskiller.mcp.jitsi.agents.*;
-import com.ecoskiller.mcp.jitsi.model.*;
 import com.ecoskiller.mcp.jitsi.security.McpSecurityManager;
 import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.ObjectMapper;
@@ -220,12 +219,18 @@ public class JitsiMcpServer {
         new JitsiMcpServer().run();
     }
 
+    private static class StderrHandler extends ConsoleHandler {
+        public StderrHandler() {
+            super();
+            setOutputStream(System.err);
+        }
+    }
+
     private static void configureLogging() {
         Logger rootLogger = Logger.getLogger("");
         // MCP uses stdio — log to stderr only
         for (Handler h : rootLogger.getHandlers()) rootLogger.removeHandler(h);
-        ConsoleHandler stderrHandler = new ConsoleHandler();
-        stderrHandler.setOutputStream(System.err);
+        StderrHandler stderrHandler = new StderrHandler();
         stderrHandler.setLevel(Level.INFO);
         rootLogger.addHandler(stderrHandler);
         rootLogger.setLevel(Level.INFO);

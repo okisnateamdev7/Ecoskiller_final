@@ -1,0 +1,233 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report-3.0.xsd" version="3.0" name="io.ecoskiller.recruiter.RecruiterMcpServerTest" time="0.469" tests="26" errors="0" skipped="0" failures="0">
+  <properties>
+    <property name="java.specification.version" value="21"/>
+    <property name="sun.cpu.isalist" value="amd64"/>
+    <property name="sun.jnu.encoding" value="Cp1252"/>
+    <property name="java.class.path" value="D:\Project\Ecoskiller\Operations\Mcp-Server\recruiter-mcp-server\recruiter-mcp-server (1)\target\test-classes;D:\Project\Ecoskiller\Operations\Mcp-Server\recruiter-mcp-server\recruiter-mcp-server (1)\target\classes;C:\Users\bljsr\.m2\repository\com\fasterxml\jackson\core\jackson-databind\2.17.1\jackson-databind-2.17.1.jar;C:\Users\bljsr\.m2\repository\com\fasterxml\jackson\core\jackson-core\2.17.1\jackson-core-2.17.1.jar;C:\Users\bljsr\.m2\repository\com\fasterxml\jackson\core\jackson-annotations\2.17.1\jackson-annotations-2.17.1.jar;C:\Users\bljsr\.m2\repository\org\junit\jupiter\junit-jupiter\5.10.2\junit-jupiter-5.10.2.jar;C:\Users\bljsr\.m2\repository\org\junit\jupiter\junit-jupiter-api\5.10.2\junit-jupiter-api-5.10.2.jar;C:\Users\bljsr\.m2\repository\org\opentest4j\opentest4j\1.3.0\opentest4j-1.3.0.jar;C:\Users\bljsr\.m2\repository\org\junit\platform\junit-platform-commons\1.10.2\junit-platform-commons-1.10.2.jar;C:\Users\bljsr\.m2\repository\org\apiguardian\apiguardian-api\1.1.2\apiguardian-api-1.1.2.jar;C:\Users\bljsr\.m2\repository\org\junit\jupiter\junit-jupiter-params\5.10.2\junit-jupiter-params-5.10.2.jar;C:\Users\bljsr\.m2\repository\org\junit\jupiter\junit-jupiter-engine\5.10.2\junit-jupiter-engine-5.10.2.jar;C:\Users\bljsr\.m2\repository\org\junit\platform\junit-platform-engine\1.10.2\junit-platform-engine-1.10.2.jar;"/>
+    <property name="java.vm.vendor" value="Oracle Corporation"/>
+    <property name="sun.arch.data.model" value="64"/>
+    <property name="user.variant" value=""/>
+    <property name="java.vendor.url" value="https://java.oracle.com/"/>
+    <property name="user.timezone" value="Asia/Calcutta"/>
+    <property name="os.name" value="Windows 11"/>
+    <property name="java.vm.specification.version" value="21"/>
+    <property name="sun.java.launcher" value="SUN_STANDARD"/>
+    <property name="user.country" value="US"/>
+    <property name="sun.boot.library.path" value="C:\Program Files\Java\jdk-21\bin"/>
+    <property name="sun.java.command" value="C:\Users\bljsr\AppData\Local\Temp\surefire11417739041220076134\surefirebooter-20260519170400449_3.jar C:\Users\bljsr\AppData\Local\Temp\surefire11417739041220076134 2026-05-19T17-04-00_244-jvmRun1 surefire-20260519170400449_1tmp surefire_0-20260519170400449_2tmp"/>
+    <property name="jdk.debug" value="release"/>
+    <property name="surefire.test.class.path" value="D:\Project\Ecoskiller\Operations\Mcp-Server\recruiter-mcp-server\recruiter-mcp-server (1)\target\test-classes;D:\Project\Ecoskiller\Operations\Mcp-Server\recruiter-mcp-server\recruiter-mcp-server (1)\target\classes;C:\Users\bljsr\.m2\repository\com\fasterxml\jackson\core\jackson-databind\2.17.1\jackson-databind-2.17.1.jar;C:\Users\bljsr\.m2\repository\com\fasterxml\jackson\core\jackson-core\2.17.1\jackson-core-2.17.1.jar;C:\Users\bljsr\.m2\repository\com\fasterxml\jackson\core\jackson-annotations\2.17.1\jackson-annotations-2.17.1.jar;C:\Users\bljsr\.m2\repository\org\junit\jupiter\junit-jupiter\5.10.2\junit-jupiter-5.10.2.jar;C:\Users\bljsr\.m2\repository\org\junit\jupiter\junit-jupiter-api\5.10.2\junit-jupiter-api-5.10.2.jar;C:\Users\bljsr\.m2\repository\org\opentest4j\opentest4j\1.3.0\opentest4j-1.3.0.jar;C:\Users\bljsr\.m2\repository\org\junit\platform\junit-platform-commons\1.10.2\junit-platform-commons-1.10.2.jar;C:\Users\bljsr\.m2\repository\org\apiguardian\apiguardian-api\1.1.2\apiguardian-api-1.1.2.jar;C:\Users\bljsr\.m2\repository\org\junit\jupiter\junit-jupiter-params\5.10.2\junit-jupiter-params-5.10.2.jar;C:\Users\bljsr\.m2\repository\org\junit\jupiter\junit-jupiter-engine\5.10.2\junit-jupiter-engine-5.10.2.jar;C:\Users\bljsr\.m2\repository\org\junit\platform\junit-platform-engine\1.10.2\junit-platform-engine-1.10.2.jar;"/>
+    <property name="sun.cpu.endian" value="little"/>
+    <property name="user.home" value="C:\Users\bljsr"/>
+    <property name="user.language" value="en"/>
+    <property name="java.specification.vendor" value="Oracle Corporation"/>
+    <property name="java.version.date" value="2025-10-21"/>
+    <property name="java.home" value="C:\Program Files\Java\jdk-21"/>
+    <property name="RECRUITER_JWT_SECRET" value="test-secret-key-for-unit-tests-min32chars"/>
+    <property name="file.separator" value="\"/>
+    <property name="basedir" value="D:\Project\Ecoskiller\Operations\Mcp-Server\recruiter-mcp-server\recruiter-mcp-server (1)"/>
+    <property name="java.vm.compressedOopsMode" value="32-bit"/>
+    <property name="line.separator" value="&#10;"/>
+    <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
+    <property name="java.specification.name" value="Java Platform API Specification"/>
+    <property name="surefire.real.class.path" value="C:\Users\bljsr\AppData\Local\Temp\surefire11417739041220076134\surefirebooter-20260519170400449_3.jar"/>
+    <property name="user.script" value=""/>
+    <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
+    <property name="java.runtime.version" value="21.0.9+7-LTS-338"/>
+    <property name="user.name" value="Balaji Suryavanshi"/>
+    <property name="stdout.encoding" value="Cp1252"/>
+    <property name="path.separator" value=";"/>
+    <property name="os.version" value="10.0"/>
+    <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
+    <property name="file.encoding" value="UTF-8"/>
+    <property name="java.vm.name" value="Java HotSpot(TM) 64-Bit Server VM"/>
+    <property name="localRepository" value="C:\Users\bljsr\.m2\repository"/>
+    <property name="java.vendor.url.bug" value="https://bugreport.java.com/bugreport/"/>
+    <property name="java.io.tmpdir" value="C:\Users\bljsr\AppData\Local\Temp\"/>
+    <property name="java.version" value="21.0.9"/>
+    <property name="user.dir" value="D:\Project\Ecoskiller\Operations\Mcp-Server\recruiter-mcp-server\recruiter-mcp-server (1)"/>
+    <property name="os.arch" value="amd64"/>
+    <property name="java.vm.specification.name" value="Java Virtual Machine Specification"/>
+    <property name="sun.os.patch.level" value=""/>
+    <property name="native.encoding" value="Cp1252"/>
+    <property name="java.library.path" value="C:\Program Files\Java\jdk-21\bin;C:\WINDOWS\Sun\Java\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\Python312\Scripts\;C:\Python312\;C:\Program Files\Common Files\Oracle\Java\javapath;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\Program Files\Java\jdk-21\bin;C:\Program Files\dotnet\;C:\Program Files\NVIDIA Corporation\NVIDIA app\NvDLISR;C:\Program Files\nodejs\;C:\ProgramData\chocolatey\bin;C:\Program Files\Microsoft SQL Server\150\Tools\Binn\;C:\Program Files\Microsoft SQL Server\Client SDK\ODBC\170\Tools\Binn\;C:\Users\bljsr\AppData\Local\Microsoft\WindowsApps;C:\Users\bljsr\AppData\Local\Programs\Microsoft VS Code\bin;C:\Users\bljsr\AppData\Roaming\npm;C:\Users\bljsr\.dotnet\tools;C:\flutter\bin;C:\Program Files\Docker\Docker\resources\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Program Files\Amazon\AWSCLIV2\;C:\Program Files\Git\cmd;C:\Program Files\GitHub CLI\;C:\Users\bljsr\.local\bin;C:\Users\bljsr\AppData\Local\Microsoft\WindowsApps;C:\Users\bljsr\AppData\Local\Programs\Microsoft VS Code\bin;C:\Users\bljsr\AppData\Roaming\npm;C:\Users\bljsr\.dotnet\tools;C:\Users\bljsr\AppData\Local\Programs\Ollama;C:\Users\bljsr\AppData\Local\Programs\Antigravity\bin;C:\Users\bljsr\AppData\Local\Programs\cursor\resources\app\bin;c:\Ecoskiller\maven_bin\bin;."/>
+    <property name="java.vm.info" value="mixed mode, sharing"/>
+    <property name="stderr.encoding" value="Cp1252"/>
+    <property name="java.vendor" value="Oracle Corporation"/>
+    <property name="java.vm.version" value="21.0.9+7-LTS-338"/>
+    <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
+    <property name="java.class.version" value="65.0"/>
+  </properties>
+  <testcase name="testInitialize" classname="io.ecoskiller.recruiter.RecruiterMcpServerTest" time="0.061">
+    <system-out><![CDATA[✅ initialize: PASS
+]]></system-out>
+    <system-err><![CDATA[May 19, 2026 5:04:01 PM io.ecoskiller.recruiter.config.ServerConfig load
+WARNING: ⚠ RECRUITER_JWT_SECRET not set — using insecure dev default. DO NOT USE IN PRODUCTION.
+May 19, 2026 5:04:01 PM io.ecoskiller.recruiter.config.ServerConfig load
+INFO: RecruiterConfig loaded: domain=ecoskiller.io rps=50 audit=true
+May 19, 2026 5:04:01 PM io.ecoskiller.recruiter.server.RecruiterMcpServer <init>
+INFO: RecruiterMcpServer initialised — 18 agents loaded.
+[AUDIT] INFO | INITIALIZE | actor=server | MCP handshake | ts=2026-05-19T11:34:01.338432200Z
+]]></system-err>
+  </testcase>
+  <testcase name="testPing" classname="io.ecoskiller.recruiter.RecruiterMcpServerTest" time="0.003">
+    <system-out><![CDATA[✅ ping: PASS
+]]></system-out>
+  </testcase>
+  <testcase name="testToolsList_18Agents" classname="io.ecoskiller.recruiter.RecruiterMcpServerTest" time="0.008">
+    <system-out><![CDATA[✅ tools/list — 18 agents: PASS
+]]></system-out>
+  </testcase>
+  <testcase name="testAccountOnboard" classname="io.ecoskiller.recruiter.RecruiterMcpServerTest" time="0.065">
+    <system-out><![CDATA[✅ recruiter_account_onboard: PASS
+]]></system-out>
+    <system-err><![CDATA[[AUDIT] INFO | TOOL_CALL | actor=test.jwt.token | recruiter_account_onboard | ts=2026-05-19T11:34:01.396556500Z
+[AUDIT] INFO | RECRUITER_ONBOARD | actor=recruiter@company.com | company=company-abc tier=professional | ts=2026-05-19T11:34:01.397557200Z
+]]></system-err>
+  </testcase>
+  <testcase name="testAccountOnboard_InvalidEmail_Rejected" classname="io.ecoskiller.recruiter.RecruiterMcpServerTest" time="0.004">
+    <system-out><![CDATA[✅ email validation guard: PASS
+]]></system-out>
+    <system-err><![CDATA[[AUDIT] INFO | TOOL_CALL | actor=t | recruiter_account_onboard | ts=2026-05-19T11:34:01.450555Z
+[AUDIT] ERROR | SECURITY_VIOLATION | actor=t | recruiter_account_onboard: Invalid email format: not-an-email | ts=2026-05-19T11:34:01.450555Z
+]]></system-err>
+  </testcase>
+  <testcase name="testAccountOnboard_InvalidTier_Rejected" classname="io.ecoskiller.recruiter.RecruiterMcpServerTest" time="0.004">
+    <system-out><![CDATA[✅ subscription tier validation: PASS
+]]></system-out>
+    <system-err><![CDATA[[AUDIT] INFO | TOOL_CALL | actor=t | recruiter_account_onboard | ts=2026-05-19T11:34:01.457293800Z
+[AUDIT] ERROR | SECURITY_VIOLATION | actor=t | recruiter_account_onboard: Invalid subscription tier 'hacker_tier'. Allowed: sta | ts=2026-05-19T11:34:01.458573100Z
+]]></system-err>
+  </testcase>
+  <testcase name="testProfileGet" classname="io.ecoskiller.recruiter.RecruiterMcpServerTest" time="0.004">
+    <system-out><![CDATA[✅ recruiter_profile_get: PASS
+]]></system-out>
+    <system-err><![CDATA[[AUDIT] INFO | TOOL_CALL | actor=test.token | recruiter_profile_get | ts=2026-05-19T11:34:01.463595400Z
+[AUDIT] INFO | PROFILE_GET | actor=rec-abc123 | include_team=false | ts=2026-05-19T11:34:01.464115500Z
+]]></system-err>
+  </testcase>
+  <testcase name="testDashboardGet" classname="io.ecoskiller.recruiter.RecruiterMcpServerTest" time="0.005">
+    <system-out><![CDATA[✅ recruiter_dashboard_get: PASS
+]]></system-out>
+    <system-err><![CDATA[[AUDIT] INFO | TOOL_CALL | actor=tok | recruiter_dashboard_get | ts=2026-05-19T11:34:01.467428100Z
+[AUDIT] INFO | DASHBOARD_GET | actor=rec-abc123 | force_refresh=false | ts=2026-05-19T11:34:01.468064800Z
+]]></system-err>
+  </testcase>
+  <testcase name="testApplicationsList_WithFilters" classname="io.ecoskiller.recruiter.RecruiterMcpServerTest" time="0.005">
+    <system-out><![CDATA[✅ recruiter_applications_list: PASS
+]]></system-out>
+    <system-err><![CDATA[[AUDIT] INFO | TOOL_CALL | actor=tok | recruiter_applications_list | ts=2026-05-19T11:34:01.474194Z
+[AUDIT] INFO | APPLICATIONS_LIST | actor=rec-abc123 | status=assessed page=10 | ts=2026-05-19T11:34:01.476856700Z
+]]></system-err>
+  </testcase>
+  <testcase name="testApplicationsList_InvalidStatus_Rejected" classname="io.ecoskiller.recruiter.RecruiterMcpServerTest" time="0.006">
+    <system-out><![CDATA[✅ status filter validation: PASS
+]]></system-out>
+    <system-err><![CDATA[[AUDIT] INFO | TOOL_CALL | actor=tok | recruiter_applications_list | ts=2026-05-19T11:34:01.480052200Z
+[AUDIT] ERROR | AGENT_ERROR | actor=tok | recruiter_applications_list: Invalid value 'hacked_status' for 'status_filter'.  | ts=2026-05-19T11:34:01.483986900Z
+]]></system-err>
+  </testcase>
+  <testcase name="testCandidateSave" classname="io.ecoskiller.recruiter.RecruiterMcpServerTest" time="0.005">
+    <system-out><![CDATA[✅ recruiter_candidate_save: PASS
+]]></system-out>
+    <system-err><![CDATA[[AUDIT] INFO | TOOL_CALL | actor=tok | recruiter_candidate_save | ts=2026-05-19T11:34:01.488110Z
+[AUDIT] INFO | CANDIDATE_SAVE | actor=rec-abc123 | candidate=cand-xyz456 tag=shortlist | ts=2026-05-19T11:34:01.489616Z
+]]></system-err>
+  </testcase>
+  <testcase name="testTeamInvite" classname="io.ecoskiller.recruiter.RecruiterMcpServerTest" time="0.008">
+    <system-out><![CDATA[✅ recruiter_team_invite: PASS
+]]></system-out>
+    <system-err><![CDATA[[AUDIT] INFO | TOOL_CALL | actor=tok | recruiter_team_invite | ts=2026-05-19T11:34:01.494174100Z
+[AUDIT] INFO | TEAM_INVITE | actor=rec-abc123 | invitee=manager@company.com role=HIRING_MANAGER | ts=2026-05-19T11:34:01.494700200Z
+]]></system-err>
+  </testcase>
+  <testcase name="testTeamInvite_InvalidRole_Rejected" classname="io.ecoskiller.recruiter.RecruiterMcpServerTest" time="0.003">
+    <system-out><![CDATA[✅ team invite role validation: PASS
+]]></system-out>
+    <system-err><![CDATA[[AUDIT] INFO | TOOL_CALL | actor=tok | recruiter_team_invite | ts=2026-05-19T11:34:01.502758100Z
+[AUDIT] ERROR | SECURITY_VIOLATION | actor=tok | recruiter_team_invite: Invalid role 'SUPER_ADMIN'. Allowed: RECRUITER, ADMIN, HI | ts=2026-05-19T11:34:01.503766600Z
+]]></system-err>
+  </testcase>
+  <testcase name="testWebhookRegister_ValidHttps" classname="io.ecoskiller.recruiter.RecruiterMcpServerTest" time="0.003">
+    <system-out><![CDATA[✅ recruiter_webhook_register (HTTPS): PASS
+]]></system-out>
+    <system-err><![CDATA[[AUDIT] INFO | TOOL_CALL | actor=tok | recruiter_webhook_register | ts=2026-05-19T11:34:01.506789200Z
+[AUDIT] INFO | WEBHOOK_REGISTER | actor=rec-abc123 | url=https://external-ats.company.com/webhook event=candidate_hired | ts=2026-05-19T11:34:01.507786700Z
+]]></system-err>
+  </testcase>
+  <testcase name="testWebhookRegister_HttpUrl_Rejected" classname="io.ecoskiller.recruiter.RecruiterMcpServerTest" time="0.003">
+    <system-out><![CDATA[✅ webhook HTTP rejection (SSRF guard): PASS
+]]></system-out>
+    <system-err><![CDATA[[AUDIT] INFO | TOOL_CALL | actor=tok | recruiter_webhook_register | ts=2026-05-19T11:34:01.510772900Z
+[AUDIT] ERROR | SECURITY_VIOLATION | actor=tok | recruiter_webhook_register: Webhook URL must be HTTPS and well-formed: http://in | ts=2026-05-19T11:34:01.511771500Z
+]]></system-err>
+  </testcase>
+  <testcase name="testWebhookRegister_InternalIp_Rejected" classname="io.ecoskiller.recruiter.RecruiterMcpServerTest" time="0.002">
+    <system-out><![CDATA[✅ webhook SSRF (private IP) guard: PASS
+]]></system-out>
+    <system-err><![CDATA[[AUDIT] INFO | TOOL_CALL | actor=tok | recruiter_webhook_register | ts=2026-05-19T11:34:01.515080Z
+[AUDIT] ERROR | SECURITY_VIOLATION | actor=tok | recruiter_webhook_register: Webhook URL must not target internal/private address | ts=2026-05-19T11:34:01.515819700Z
+]]></system-err>
+  </testcase>
+  <testcase name="testSubscriptionUpgrade" classname="io.ecoskiller.recruiter.RecruiterMcpServerTest" time="0.004">
+    <system-out><![CDATA[✅ recruiter_subscription_upgrade: PASS
+]]></system-out>
+    <system-err><![CDATA[[AUDIT] INFO | TOOL_CALL | actor=tok | recruiter_subscription_upgrade | ts=2026-05-19T11:34:01.521028700Z
+[AUDIT] INFO | SUBSCRIPTION_UPGRADE | actor=rec-abc123 | new_tier=enterprise billing=annual | ts=2026-05-19T11:34:01.521576700Z
+]]></system-err>
+  </testcase>
+  <testcase name="testSubscriptionUpgrade_ToStarter_Rejected" classname="io.ecoskiller.recruiter.RecruiterMcpServerTest" time="0.003">
+    <system-out><![CDATA[✅ subscription upgrade to starter guard: PASS
+]]></system-out>
+    <system-err><![CDATA[[AUDIT] INFO | TOOL_CALL | actor=tok | recruiter_subscription_upgrade | ts=2026-05-19T11:34:01.525706900Z
+[AUDIT] ERROR | AGENT_ERROR | actor=tok | recruiter_subscription_upgrade: Cannot upgrade to starter — use downgrade endpoi | ts=2026-05-19T11:34:01.526713800Z
+]]></system-err>
+  </testcase>
+  <testcase name="testAnalyticsGet" classname="io.ecoskiller.recruiter.RecruiterMcpServerTest" time="0.005">
+    <system-out><![CDATA[✅ recruiter_analytics_get: PASS
+]]></system-out>
+    <system-err><![CDATA[[AUDIT] INFO | TOOL_CALL | actor=tok | recruiter_analytics_get | ts=2026-05-19T11:34:01.530508200Z
+[AUDIT] INFO | ANALYTICS_GET | actor=rec-abc123 | metric=all from=2026-01-01 | ts=2026-05-19T11:34:01.531016200Z
+]]></system-err>
+  </testcase>
+  <testcase name="testAnalyticsGet_BadDateFormat_Rejected" classname="io.ecoskiller.recruiter.RecruiterMcpServerTest" time="0.002">
+    <system-out><![CDATA[✅ analytics date format validation: PASS
+]]></system-out>
+    <system-err><![CDATA[[AUDIT] INFO | TOOL_CALL | actor=tok | recruiter_analytics_get | ts=2026-05-19T11:34:01.535852500Z
+[AUDIT] ERROR | AGENT_ERROR | actor=tok | recruiter_analytics_get: date_from must be YYYY-MM-DD | ts=2026-05-19T11:34:01.536395300Z
+]]></system-err>
+  </testcase>
+  <testcase name="testAuditLogQuery" classname="io.ecoskiller.recruiter.RecruiterMcpServerTest" time="0.008">
+    <system-out><![CDATA[✅ recruiter_audit_log_query: PASS
+]]></system-out>
+    <system-err><![CDATA[[AUDIT] INFO | TOOL_CALL | actor=tok | recruiter_audit_log_query | ts=2026-05-19T11:34:01.539516300Z
+[AUDIT] INFO | AUDIT_LOG_QUERY | actor=rec-abc123 | action=ALL resource=ALL | ts=2026-05-19T11:34:01.540216100Z
+]]></system-err>
+  </testcase>
+  <testcase name="testAllToolsHaveJwtTokenAndDescription" classname="io.ecoskiller.recruiter.RecruiterMcpServerTest" time="0.005">
+    <system-out><![CDATA[✅ all 18 agents: description + jwt_token verified: PASS
+]]></system-out>
+  </testcase>
+  <testcase name="testMalformedJson_ParseError" classname="io.ecoskiller.recruiter.RecruiterMcpServerTest" time="0.002">
+    <system-out><![CDATA[✅ malformed JSON -32700: PASS
+]]></system-out>
+  </testcase>
+  <testcase name="testUnknownMethod" classname="io.ecoskiller.recruiter.RecruiterMcpServerTest" time="0.001">
+    <system-out><![CDATA[✅ unknown method -32601: PASS
+]]></system-out>
+  </testcase>
+  <testcase name="testPathTraversalInToolName" classname="io.ecoskiller.recruiter.RecruiterMcpServerTest" time="0.003">
+    <system-out><![CDATA[✅ tool name injection guard: PASS
+]]></system-out>
+    <system-err><![CDATA[[AUDIT] WARN | INVALID_TOOL_NAME | actor=unknown | ../etc/passwd | ts=2026-05-19T11:34:01.561519300Z
+]]></system-err>
+  </testcase>
+  <testcase name="testSqlInjectionInRecruiterId" classname="io.ecoskiller.recruiter.RecruiterMcpServerTest" time="0.002">
+    <system-out><![CDATA[✅ SQL injection in recruiter_id guard: PASS
+]]></system-out>
+    <system-err><![CDATA[[AUDIT] INFO | TOOL_CALL | actor=t | recruiter_profile_get | ts=2026-05-19T11:34:01.564039900Z
+[AUDIT] ERROR | SECURITY_VIOLATION | actor=t | recruiter_profile_get: Invalid recruiter_id format: '; DROP TABLE recruiter;-- | ts=2026-05-19T11:34:01.564039900Z
+]]></system-err>
+  </testcase>
+</testsuite>

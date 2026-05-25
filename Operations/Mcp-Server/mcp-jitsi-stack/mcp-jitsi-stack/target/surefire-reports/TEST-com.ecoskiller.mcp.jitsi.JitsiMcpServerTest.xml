@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report-3.0.xsd" version="3.0" name="com.ecoskiller.mcp.jitsi.JitsiMcpServerTest" time="0.435" tests="35" errors="0" skipped="0" failures="0">
+  <properties>
+    <property name="java.specification.version" value="21"/>
+    <property name="sun.cpu.isalist" value="amd64"/>
+    <property name="sun.jnu.encoding" value="Cp1252"/>
+    <property name="java.class.path" value="D:\Project\Ecoskiller\Operations\Mcp-Server\mcp-jitsi-stack\mcp-jitsi-stack\target\test-classes;D:\Project\Ecoskiller\Operations\Mcp-Server\mcp-jitsi-stack\mcp-jitsi-stack\target\classes;C:\Users\bljsr\.m2\repository\com\fasterxml\jackson\core\jackson-databind\2.16.1\jackson-databind-2.16.1.jar;C:\Users\bljsr\.m2\repository\com\fasterxml\jackson\core\jackson-core\2.16.1\jackson-core-2.16.1.jar;C:\Users\bljsr\.m2\repository\com\fasterxml\jackson\core\jackson-annotations\2.16.1\jackson-annotations-2.16.1.jar;C:\Users\bljsr\.m2\repository\org\junit\jupiter\junit-jupiter\5.10.2\junit-jupiter-5.10.2.jar;C:\Users\bljsr\.m2\repository\org\junit\jupiter\junit-jupiter-api\5.10.2\junit-jupiter-api-5.10.2.jar;C:\Users\bljsr\.m2\repository\org\opentest4j\opentest4j\1.3.0\opentest4j-1.3.0.jar;C:\Users\bljsr\.m2\repository\org\junit\platform\junit-platform-commons\1.10.2\junit-platform-commons-1.10.2.jar;C:\Users\bljsr\.m2\repository\org\apiguardian\apiguardian-api\1.1.2\apiguardian-api-1.1.2.jar;C:\Users\bljsr\.m2\repository\org\junit\jupiter\junit-jupiter-params\5.10.2\junit-jupiter-params-5.10.2.jar;C:\Users\bljsr\.m2\repository\org\junit\jupiter\junit-jupiter-engine\5.10.2\junit-jupiter-engine-5.10.2.jar;C:\Users\bljsr\.m2\repository\org\junit\platform\junit-platform-engine\1.10.2\junit-platform-engine-1.10.2.jar;"/>
+    <property name="java.vm.vendor" value="Oracle Corporation"/>
+    <property name="sun.arch.data.model" value="64"/>
+    <property name="user.variant" value=""/>
+    <property name="java.vendor.url" value="https://java.oracle.com/"/>
+    <property name="user.timezone" value="Asia/Calcutta"/>
+    <property name="os.name" value="Windows 11"/>
+    <property name="java.vm.specification.version" value="21"/>
+    <property name="sun.java.launcher" value="SUN_STANDARD"/>
+    <property name="user.country" value="US"/>
+    <property name="sun.boot.library.path" value="C:\Program Files\Java\jdk-21\bin"/>
+    <property name="sun.java.command" value="C:\Users\bljsr\AppData\Local\Temp\surefire8288154459689718918\surefirebooter-20260519162735260_3.jar C:\Users\bljsr\AppData\Local\Temp\surefire8288154459689718918 2026-05-19T16-27-35_034-jvmRun1 surefire-20260519162735260_1tmp surefire_0-20260519162735260_2tmp"/>
+    <property name="jdk.debug" value="release"/>
+    <property name="surefire.test.class.path" value="D:\Project\Ecoskiller\Operations\Mcp-Server\mcp-jitsi-stack\mcp-jitsi-stack\target\test-classes;D:\Project\Ecoskiller\Operations\Mcp-Server\mcp-jitsi-stack\mcp-jitsi-stack\target\classes;C:\Users\bljsr\.m2\repository\com\fasterxml\jackson\core\jackson-databind\2.16.1\jackson-databind-2.16.1.jar;C:\Users\bljsr\.m2\repository\com\fasterxml\jackson\core\jackson-core\2.16.1\jackson-core-2.16.1.jar;C:\Users\bljsr\.m2\repository\com\fasterxml\jackson\core\jackson-annotations\2.16.1\jackson-annotations-2.16.1.jar;C:\Users\bljsr\.m2\repository\org\junit\jupiter\junit-jupiter\5.10.2\junit-jupiter-5.10.2.jar;C:\Users\bljsr\.m2\repository\org\junit\jupiter\junit-jupiter-api\5.10.2\junit-jupiter-api-5.10.2.jar;C:\Users\bljsr\.m2\repository\org\opentest4j\opentest4j\1.3.0\opentest4j-1.3.0.jar;C:\Users\bljsr\.m2\repository\org\junit\platform\junit-platform-commons\1.10.2\junit-platform-commons-1.10.2.jar;C:\Users\bljsr\.m2\repository\org\apiguardian\apiguardian-api\1.1.2\apiguardian-api-1.1.2.jar;C:\Users\bljsr\.m2\repository\org\junit\jupiter\junit-jupiter-params\5.10.2\junit-jupiter-params-5.10.2.jar;C:\Users\bljsr\.m2\repository\org\junit\jupiter\junit-jupiter-engine\5.10.2\junit-jupiter-engine-5.10.2.jar;C:\Users\bljsr\.m2\repository\org\junit\platform\junit-platform-engine\1.10.2\junit-platform-engine-1.10.2.jar;"/>
+    <property name="sun.cpu.endian" value="little"/>
+    <property name="user.home" value="C:\Users\bljsr"/>
+    <property name="user.language" value="en"/>
+    <property name="java.specification.vendor" value="Oracle Corporation"/>
+    <property name="java.version.date" value="2025-10-21"/>
+    <property name="java.home" value="C:\Program Files\Java\jdk-21"/>
+    <property name="file.separator" value="\"/>
+    <property name="basedir" value="D:\Project\Ecoskiller\Operations\Mcp-Server\mcp-jitsi-stack\mcp-jitsi-stack"/>
+    <property name="java.vm.compressedOopsMode" value="32-bit"/>
+    <property name="line.separator" value="&#10;"/>
+    <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
+    <property name="java.specification.name" value="Java Platform API Specification"/>
+    <property name="surefire.real.class.path" value="C:\Users\bljsr\AppData\Local\Temp\surefire8288154459689718918\surefirebooter-20260519162735260_3.jar"/>
+    <property name="user.script" value=""/>
+    <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
+    <property name="java.runtime.version" value="21.0.9+7-LTS-338"/>
+    <property name="user.name" value="Balaji Suryavanshi"/>
+    <property name="stdout.encoding" value="Cp1252"/>
+    <property name="path.separator" value=";"/>
+    <property name="os.version" value="10.0"/>
+    <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
+    <property name="file.encoding" value="UTF-8"/>
+    <property name="java.vm.name" value="Java HotSpot(TM) 64-Bit Server VM"/>
+    <property name="localRepository" value="C:\Users\bljsr\.m2\repository"/>
+    <property name="java.vendor.url.bug" value="https://bugreport.java.com/bugreport/"/>
+    <property name="java.io.tmpdir" value="C:\Users\bljsr\AppData\Local\Temp\"/>
+    <property name="java.version" value="21.0.9"/>
+    <property name="user.dir" value="D:\Project\Ecoskiller\Operations\Mcp-Server\mcp-jitsi-stack\mcp-jitsi-stack"/>
+    <property name="os.arch" value="amd64"/>
+    <property name="java.vm.specification.name" value="Java Virtual Machine Specification"/>
+    <property name="sun.os.patch.level" value=""/>
+    <property name="native.encoding" value="Cp1252"/>
+    <property name="java.library.path" value="C:\Program Files\Java\jdk-21\bin;C:\WINDOWS\Sun\Java\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\Python312\Scripts\;C:\Python312\;C:\Program Files\Common Files\Oracle\Java\javapath;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\Program Files\Java\jdk-21\bin;C:\Program Files\dotnet\;C:\Program Files\NVIDIA Corporation\NVIDIA app\NvDLISR;C:\Program Files\nodejs\;C:\ProgramData\chocolatey\bin;C:\Program Files\Microsoft SQL Server\150\Tools\Binn\;C:\Program Files\Microsoft SQL Server\Client SDK\ODBC\170\Tools\Binn\;C:\Users\bljsr\AppData\Local\Microsoft\WindowsApps;C:\Users\bljsr\AppData\Local\Programs\Microsoft VS Code\bin;C:\Users\bljsr\AppData\Roaming\npm;C:\Users\bljsr\.dotnet\tools;C:\flutter\bin;C:\Program Files\Docker\Docker\resources\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Program Files\Amazon\AWSCLIV2\;C:\Program Files\Git\cmd;C:\Program Files\GitHub CLI\;C:\Users\bljsr\.local\bin;C:\Users\bljsr\AppData\Local\Microsoft\WindowsApps;C:\Users\bljsr\AppData\Local\Programs\Microsoft VS Code\bin;C:\Users\bljsr\AppData\Roaming\npm;C:\Users\bljsr\.dotnet\tools;C:\Users\bljsr\AppData\Local\Programs\Ollama;C:\Users\bljsr\AppData\Local\Programs\Antigravity\bin;C:\Users\bljsr\AppData\Local\Programs\cursor\resources\app\bin;c:\Ecoskiller\maven_bin\bin;."/>
+    <property name="java.vm.info" value="mixed mode, sharing"/>
+    <property name="stderr.encoding" value="Cp1252"/>
+    <property name="java.vendor" value="Oracle Corporation"/>
+    <property name="java.vm.version" value="21.0.9+7-LTS-338"/>
+    <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
+    <property name="java.class.version" value="65.0"/>
+  </properties>
+  <testcase name="testFreeswitchPstnBridge_BridgeCaller" classname="com.ecoskiller.mcp.jitsi.JitsiMcpServerTest" time="0.051"/>
+  <testcase name="testJitsiWebSession_GdConfig" classname="com.ecoskiller.mcp.jitsi.JitsiMcpServerTest" time="0.005"/>
+  <testcase name="testSecurity_UnknownToolRejected" classname="com.ecoskiller.mcp.jitsi.JitsiMcpServerTest" time="0.003"/>
+  <testcase name="testFreeswitchPstnBridge_ClientLost" classname="com.ecoskiller.mcp.jitsi.JitsiMcpServerTest" time="0.002"/>
+  <testcase name="testCoturnNatTraversal_FirewallRules" classname="com.ecoskiller.mcp.jitsi.JitsiMcpServerTest" time="0.004"/>
+  <testcase name="testGdSessionOrchestrator_StartGd" classname="com.ecoskiller.mcp.jitsi.JitsiMcpServerTest" time="0.008"/>
+  <testcase name="testSecurity_ErrorSanitization" classname="com.ecoskiller.mcp.jitsi.JitsiMcpServerTest" time="0.003"/>
+  <testcase name="testJicofoParticipantRouting_MuteAll" classname="com.ecoskiller.mcp.jitsi.JitsiMcpServerTest" time="0.002"/>
+  <testcase name="testJitsiHealthMonitor_GdFailureRunbook" classname="com.ecoskiller.mcp.jitsi.JitsiMcpServerTest" time="0.005"/>
+  <testcase name="testJvbStreamRouting_RouteStreams" classname="com.ecoskiller.mcp.jitsi.JitsiMcpServerTest" time="0.003"/>
+  <testcase name="testJicofoParticipantRouting_UnmuteParticipant" classname="com.ecoskiller.mcp.jitsi.JitsiMcpServerTest" time="0.002"/>
+  <testcase name="testJicofoRoomLifecycle_CreateRoom" classname="com.ecoskiller.mcp.jitsi.JitsiMcpServerTest" time="0.003"/>
+  <testcase name="testMediaSecurityAudit_Encryption" classname="com.ecoskiller.mcp.jitsi.JitsiMcpServerTest" time="0.004"/>
+  <testcase name="testJitsiHealthMonitor_QosDashboard" classname="com.ecoskiller.mcp.jitsi.JitsiMcpServerTest" time="0.002"/>
+  <testcase name="testGdSessionOrchestrator_AdvanceTurn" classname="com.ecoskiller.mcp.jitsi.JitsiMcpServerTest" time="0.005"/>
+  <testcase name="testJvbStreamRouting_SimulcastLayer" classname="com.ecoskiller.mcp.jitsi.JitsiMcpServerTest" time="0.001"/>
+  <testcase name="testSecurity_InjectionBlocked" classname="com.ecoskiller.mcp.jitsi.JitsiMcpServerTest" time="0.003"/>
+  <testcase name="testSecurity_ArgumentDepthBomb" classname="com.ecoskiller.mcp.jitsi.JitsiMcpServerTest" time="0.02"/>
+  <testcase name="testJvbQualityMetrics_FullReport" classname="com.ecoskiller.mcp.jitsi.JitsiMcpServerTest" time="0.003"/>
+  <testcase name="testSecurity_XmppInjectionBlocked" classname="com.ecoskiller.mcp.jitsi.JitsiMcpServerTest" time="0.002"/>
+  <testcase name="testCoturnNatTraversal_RelayStats" classname="com.ecoskiller.mcp.jitsi.JitsiMcpServerTest" time="0.002"/>
+  <testcase name="testMediaSecurityAudit_FullReport" classname="com.ecoskiller.mcp.jitsi.JitsiMcpServerTest" time="0.001"/>
+  <testcase name="testProsodyXmppSignalling_ComponentStatus" classname="com.ecoskiller.mcp.jitsi.JitsiMcpServerTest" time="0.002"/>
+  <testcase name="testJitsiWebSession_ProdDomain" classname="com.ecoskiller.mcp.jitsi.JitsiMcpServerTest" time="0.002"/>
+  <testcase name="testProsodyJwtValidation_MalformedJwt" classname="com.ecoskiller.mcp.jitsi.JitsiMcpServerTest" time="0.003"/>
+  <testcase name="testProsodyXmppSignalling_MucStatus" classname="com.ecoskiller.mcp.jitsi.JitsiMcpServerTest" time="0.001"/>
+  <testcase name="testJitsiWebSession_ValidateConfigFail" classname="com.ecoskiller.mcp.jitsi.JitsiMcpServerTest" time="0.002"/>
+  <testcase name="testProsodyJwtValidation_TooLong" classname="com.ecoskiller.mcp.jitsi.JitsiMcpServerTest" time="0.007"/>
+  <testcase name="testMcpProtocol_Initialize" classname="com.ecoskiller.mcp.jitsi.JitsiMcpServerTest" time="0.003"/>
+  <testcase name="testProsodyJwtValidation_ValidToken" classname="com.ecoskiller.mcp.jitsi.JitsiMcpServerTest" time="0.003"/>
+  <testcase name="testJvbQualityMetrics_Bitrate" classname="com.ecoskiller.mcp.jitsi.JitsiMcpServerTest" time="0.001"/>
+  <testcase name="testSecurity_OversizedInput" classname="com.ecoskiller.mcp.jitsi.JitsiMcpServerTest" time="0.004"/>
+  <testcase name="testJicofoRoomLifecycle_GdAudioOnlyPolicy" classname="com.ecoskiller.mcp.jitsi.JitsiMcpServerTest" time="0.001"/>
+  <testcase name="testMcpProtocol_ToolsListCount" classname="com.ecoskiller.mcp.jitsi.JitsiMcpServerTest" time="0.004"/>
+  <testcase name="testJvbStreamRouting_SuspendTrack" classname="com.ecoskiller.mcp.jitsi.JitsiMcpServerTest" time="0.001"/>
+</testsuite>

@@ -1,4 +1,4 @@
-package io.ecoskiller.mcp.jitsi.security;
+package io.ecoskiller.mcp.jitsi;
 
 import java.util.concurrent.ConcurrentHashMap;
 import java.util.concurrent.atomic.AtomicInteger;

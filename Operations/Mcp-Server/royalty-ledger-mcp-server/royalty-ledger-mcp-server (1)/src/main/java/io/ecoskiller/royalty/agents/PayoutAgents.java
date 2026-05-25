@@ -15,7 +15,7 @@ import java.time.Instant;
  * Calls payment-distribution-engine POST /api/v1/settlements/initiate.
  * Publishes payout.scheduled Kafka event.
  */
-public class PayoutRequestAgent extends BaseAgent {
+class PayoutRequestAgent extends BaseAgent {
     public PayoutRequestAgent(ServerConfig c, AuditLogger a) { super(c, a); }
 
     @Override public JsonNode getToolDefinition() {
@@ -83,7 +83,7 @@ public class PayoutRequestAgent extends BaseAgent {
         res.put("tds_rate_pct",      tdsRate);
         res.put("tds_withheld_inr",  tdsAmount);
         res.put("net_payout_inr",    netPayout);
-        res.put("status",            "scheduled");
+        res.put("status_value",      "scheduled");
         res.put("settlement_id",     settlementId);
         res.put("scheduled_at",      Instant.now().toString());
         res.put("expected_credit",   Instant.now().plusSeconds(86400L).toString());
@@ -108,7 +108,7 @@ public class PayoutRequestAgent extends BaseAgent {
 // ═══════════════════════════════════════════════════════════════════════════════
 // AGENT 7 — PAYOUT_STATUS_GET
 // ═══════════════════════════════════════════════════════════════════════════════
-public class PayoutStatusGetAgent extends BaseAgent {
+class PayoutStatusGetAgent extends BaseAgent {
     public PayoutStatusGetAgent(ServerConfig c, AuditLogger a) { super(c, a); }
 
     @Override public JsonNode getToolDefinition() {
@@ -159,7 +159,7 @@ public class PayoutStatusGetAgent extends BaseAgent {
  * Generates quarterly tax statements (Form 26AS-style).
  * Supports exemption certificate management.
  */
-public class TaxComplianceCalculateAgent extends BaseAgent {
+class TaxComplianceCalculateAgent extends BaseAgent {
     public TaxComplianceCalculateAgent(ServerConfig c, AuditLogger a) { super(c, a); }
 
     @Override public JsonNode getToolDefinition() {
@@ -247,7 +247,7 @@ public class TaxComplianceCalculateAgent extends BaseAgent {
 // ═══════════════════════════════════════════════════════════════════════════════
 // AGENT 9 — IP_CHALLENGE_SUBMIT
 // ═══════════════════════════════════════════════════════════════════════════════
-public class IpChallengeSubmitAgent extends BaseAgent {
+class IpChallengeSubmitAgent extends BaseAgent {
     public IpChallengeSubmitAgent(ServerConfig c, AuditLogger a) { super(c, a); }
 
     @Override public JsonNode getToolDefinition() {
@@ -291,7 +291,7 @@ public class IpChallengeSubmitAgent extends BaseAgent {
         res.put("dispute_id",      disputeId);
         res.put("ip_id",           ipId);
         res.put("challenger_id",   challengerId);
-        res.put("status",          "pending");
+        res.put("status_field",    "pending");
         res.put("submitted_at",    Instant.now().toString());
         res.put("auto_resolve_at", Instant.now().plusSeconds(30*86400L).toString());
         res.put("auto_resolve_note","Auto-resolves in favour of current owner after 30 days if no admin decision");
@@ -315,7 +315,7 @@ public class IpChallengeSubmitAgent extends BaseAgent {
 // ═══════════════════════════════════════════════════════════════════════════════
 // AGENT 10 — SPLIT_CONFIG_MANAGE
 // ═══════════════════════════════════════════════════════════════════════════════
-public class SplitConfigManageAgent extends BaseAgent {
+class SplitConfigManageAgent extends BaseAgent {
     public SplitConfigManageAgent(ServerConfig c, AuditLogger a) { super(c, a); }
 
     @Override public JsonNode getToolDefinition() {
@@ -371,11 +371,11 @@ public class SplitConfigManageAgent extends BaseAgent {
                 res.put("adjustment_id",    genId("adj"));
                 res.put("proposed_splits",  newSplits);
                 res.put("retroactive",      retroactive);
-                res.put("status",           "pending_contributor_approval");
+                res.put("status_field",     "pending_contributor_approval");
                 res.put("note", "All co-contributors must approve via approve_adjustment before this activates");
             }
             case "approve_adjustment" -> {
-                res.put("status", "approved_by_" + requesterId);
+                res.put("status_field", "approved_by_" + requesterId);
                 res.put("note",   "When all contributors approve, splits will activate");
             }
             case "view_history" -> {

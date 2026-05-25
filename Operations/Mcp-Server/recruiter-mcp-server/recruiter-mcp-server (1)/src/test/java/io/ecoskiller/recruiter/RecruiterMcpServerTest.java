@@ -4,6 +4,7 @@ import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import io.ecoskiller.recruiter.server.RecruiterMcpServer;
 import org.junit.jupiter.api.*;
+import java.util.Set;
 import static org.junit.jupiter.api.Assertions.*;
 
 /**

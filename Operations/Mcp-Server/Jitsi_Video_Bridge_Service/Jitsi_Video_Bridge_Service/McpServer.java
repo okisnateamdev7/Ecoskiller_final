@@ -1,8 +1,4 @@
-package io.ecoskiller.mcp.jitsi.server;
-
-import io.ecoskiller.mcp.jitsi.security.JwtValidator;
-import io.ecoskiller.mcp.jitsi.security.RateLimiter;
-import io.ecoskiller.mcp.jitsi.tools.*;
+package io.ecoskiller.mcp.jitsi;
 
 import java.io.*;
 import java.nio.charset.StandardCharsets;
@@ -258,7 +254,7 @@ public class McpServer {
         Logger root = Logger.getLogger("");
         for (Handler h : root.getHandlers()) root.removeHandler(h);
         ConsoleHandler stderr = new ConsoleHandler();
-        stderr.setOutputStream(System.err);
+        // stderr.setOutputStream(System.err); // setOutputStream is protected; ConsoleHandler defaults to System.err
         stderr.setLevel(Level.ALL);
         root.addHandler(stderr);
         root.setLevel(Level.INFO);

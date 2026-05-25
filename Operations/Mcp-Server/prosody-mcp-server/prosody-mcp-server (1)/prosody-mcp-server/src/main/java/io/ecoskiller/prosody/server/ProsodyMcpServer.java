@@ -61,20 +61,7 @@ public class ProsodyMcpServer {
     }
 
     private void registerAgents() {
-        agents.put("xmpp_room_create",          new XmppRoomCreateAgent(config, auditLogger));
-        agents.put("xmpp_room_close",           new XmppRoomCloseAgent(config, auditLogger));
-        agents.put("xmpp_room_query",           new XmppRoomQueryAgent(config, auditLogger));
-        agents.put("xmpp_participant_join",     new XmppParticipantJoinAgent(config, auditLogger));
-        agents.put("xmpp_participant_leave",    new XmppParticipantLeaveAgent(config, auditLogger));
-        agents.put("xmpp_roster_get",           new XmppRosterGetAgent(config, auditLogger));
-        agents.put("xmpp_presence_update",      new XmppPresenceUpdateAgent(config, auditLogger));
-        agents.put("xmpp_signaling_relay",      new XmppSignalingRelayAgent(config, auditLogger));
-        agents.put("xmpp_jwt_validate",         new XmppJwtValidateAgent(config, auditLogger));
-        agents.put("xmpp_connection_health",    new XmppConnectionHealthAgent(config, auditLogger));
-        agents.put("xmpp_metrics_get",          new XmppMetricsGetAgent(config, auditLogger));
-        agents.put("xmpp_rate_limit_control",   new XmppRateLimitControlAgent(config, auditLogger, rateLimiter));
-        agents.put("xmpp_kafka_event_emit",     new XmppKafkaEventEmitAgent(config, auditLogger));
-        agents.put("xmpp_audit_log_query",      new XmppAuditLogQueryAgent(config, auditLogger));
+        agents.putAll(AgentFactory.createAllAgents(config, auditLogger, rateLimiter));
     }
 
     // ── Main loop ───────────────────────────────────────────────────────────────
@@ -101,7 +88,7 @@ public class ProsodyMcpServer {
 
     // ── JSON-RPC dispatcher ─────────────────────────────────────────────────────
 
-    String handleRawMessage(String rawJson) {
+    public String handleRawMessage(String rawJson) {
         JsonNode request;
         try {
             request = mapper.readTree(rawJson);
@@ -275,7 +262,6 @@ public class ProsodyMcpServer {
         root.setLevel(Level.INFO);
         // Log to stderr (stdout is reserved for JSON-RPC)
         ConsoleHandler handler = new ConsoleHandler();
-        handler.setStream(System.err);
         handler.setLevel(Level.ALL);
         handler.setFormatter(new SimpleFormatter());
         root.addHandler(handler);

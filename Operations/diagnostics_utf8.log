@@ -1,0 +1,134 @@
+Sending SSM command...
+Command sent successfully. Command ID: fc105568-d715-4f7c-9955-163c8259a929
+Waiting for command execution to complete...
+[1] Status: Pending
+[2] Status: Pending
+[3] Status: Pending
+[4] Status: Pending
+[5] Status: Pending
+[6] Status: Pending
+[7] Status: Pending
+[8] Status: Pending
+[9] Status: Pending
+[10] Status: Pending
+[11] Status: Pending
+[12] Status: Pending
+[13] Status: Pending
+[14] Status: Pending
+[15] Status: Pending
+[16] Error checking status: {
+
+    "CommandId": "fc105568-d715-4f7c-9955-163c8259a929",
+
+    "InstanceId": "i-0dd57e2a880632966",
+
+    "Comment": "",
+
+    "DocumentName": "AWS-RunShellScript",
+
+    "DocumentVersion": "$DEFAULT",
+
+    "PluginName": "aws:runShellScript",
+
+    "ResponseCode": 0,
+
+    "ExecutionStartDateTime": "2026-05-23T08:51:32.162Z",
+
+    "ExecutionElapsedTime": "PT58.822S",
+
+    "ExecutionEndDateTime": "2026-05-23T08:52:30.162Z",
+
+    "Status": "Success",
+
+    "StatusDetails": "Success",
+
+    "StandardOutputContent": 
+
+'charmap' codec can't encode character '\u2192' in position 2602: character maps to <undefined>
+[17] Error checking status: {
+
+    "CommandId": "fc105568-d715-4f7c-9955-163c8259a929",
+
+    "InstanceId": "i-0dd57e2a880632966",
+
+    "Comment": "",
+
+    "DocumentName": "AWS-RunShellScript",
+
+    "DocumentVersion": "$DEFAULT",
+
+    "PluginName": "aws:runShellScript",
+
+    "ResponseCode": 0,
+
+    "ExecutionStartDateTime": "2026-05-23T08:51:32.162Z",
+
+    "ExecutionElapsedTime": "PT58.822S",
+
+    "ExecutionEndDateTime": "2026-05-23T08:52:30.162Z",
+
+    "Status": "Success",
+
+    "StatusDetails": "Success",
+
+    "StandardOutputContent": 
+
+'charmap' codec can't encode character '\u2192' in position 2602: character maps to <undefined>
+[18] Error checking status: {
+
+    "CommandId": "fc105568-d715-4f7c-9955-163c8259a929",
+
+    "InstanceId": "i-0dd57e2a880632966",
+
+    "Comment": "",
+
+    "DocumentName": "AWS-RunShellScript",
+
+    "DocumentVersion": "$DEFAULT",
+
+    "PluginName": "aws:runShellScript",
+
+    "ResponseCode": 0,
+
+    "ExecutionStartDateTime": "2026-05-23T08:51:32.162Z",
+
+    "ExecutionElapsedTime": "PT58.822S",
+
+    "ExecutionEndDateTime": "2026-05-23T08:52:30.162Z",
+
+    "Status": "Success",
+
+    "StatusDetails": "Success",
+
+    "StandardOutputContent": 
+
+'charmap' codec can't encode character '\u2192' in position 2602: character maps to <undefined>
+[19] Error checking status: {
+
+    "CommandId": "fc105568-d715-4f7c-9955-163c8259a929",
+
+    "InstanceId": "i-0dd57e2a880632966",
+
+    "Comment": "",
+
+    "DocumentName": "AWS-RunShellScript",
+
+    "DocumentVersion": "$DEFAULT",
+
+    "PluginName": "aws:runShellScript",
+
+    "ResponseCode": 0,
+
+    "ExecutionStartDateTime": "2026-05-23T08:51:32.162Z",
+
+    "ExecutionElapsedTime": "PT58.822S",
+
+    "ExecutionEndDateTime": "2026-05-23T08:52:30.162Z",
+
+    "Status": "Success",
+
+    "StatusDetails": "Success",
+
+    "StandardOutputContent": 
+
+'charmap' codec can't encode character '\u2192' in position 2602: character maps to <undefined>

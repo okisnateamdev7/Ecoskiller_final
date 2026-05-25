@@ -1,6 +1,4 @@
-package io.ecoskiller.mcp.jitsi.tools;
-
-import io.ecoskiller.mcp.jitsi.model.ConferenceStore;
+package io.ecoskiller.mcp.jitsi;
 
 import java.time.Instant;
 import java.util.*;

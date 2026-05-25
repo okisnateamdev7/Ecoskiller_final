@@ -18,7 +18,7 @@ import java.time.Instant;
  *   billing-service (initialize subscription), analytics-service
  * - Writes to PostgreSQL recruiter + recruiter_profile tables
  */
-public class RecruiterAccountOnboardAgent extends BaseAgent {
+class RecruiterAccountOnboardAgent extends BaseAgent {
     public RecruiterAccountOnboardAgent(ServerConfig c, AuditLogger a) { super(c, a); }
 
     @Override public JsonNode getToolDefinition() {
@@ -107,7 +107,7 @@ public class RecruiterAccountOnboardAgent extends BaseAgent {
 // ═══════════════════════════════════════════════════════════════════════════════
 // AGENT 2 — RECRUITER_PROFILE_GET
 // ═══════════════════════════════════════════════════════════════════════════════
-public class RecruiterProfileGetAgent extends BaseAgent {
+class RecruiterProfileGetAgent extends BaseAgent {
     public RecruiterProfileGetAgent(ServerConfig c, AuditLogger a) { super(c, a); }
 
     @Override public JsonNode getToolDefinition() {
@@ -141,6 +141,7 @@ public class RecruiterProfileGetAgent extends BaseAgent {
         res.put("subscription_tier", "professional");
         res.put("company_id",        "company-abc");
         res.put("cache_source",      "redis:recruiter:" + recruiterId + ":profile");
+        res.put("cache_key",         "recruiter:" + recruiterId + ":profile");
         res.put("cache_ttl_seconds", 3600);
         res.put("rls_policy",        "tenant_id enforced at PostgreSQL RLS layer");
 
@@ -164,7 +165,7 @@ public class RecruiterProfileGetAgent extends BaseAgent {
 // ═══════════════════════════════════════════════════════════════════════════════
 // AGENT 3 — RECRUITER_PROFILE_UPDATE
 // ═══════════════════════════════════════════════════════════════════════════════
-public class RecruiterProfileUpdateAgent extends BaseAgent {
+class RecruiterProfileUpdateAgent extends BaseAgent {
     public RecruiterProfileUpdateAgent(ServerConfig c, AuditLogger a) { super(c, a); }
 
     @Override public JsonNode getToolDefinition() {
@@ -221,7 +222,7 @@ public class RecruiterProfileUpdateAgent extends BaseAgent {
 // ═══════════════════════════════════════════════════════════════════════════════
 // AGENT 4 — RECRUITER_DASHBOARD_GET
 // ═══════════════════════════════════════════════════════════════════════════════
-public class RecruiterDashboardGetAgent extends BaseAgent {
+class RecruiterDashboardGetAgent extends BaseAgent {
     public RecruiterDashboardGetAgent(ServerConfig c, AuditLogger a) { super(c, a); }
 
     @Override public JsonNode getToolDefinition() {
@@ -278,7 +279,7 @@ public class RecruiterDashboardGetAgent extends BaseAgent {
 // ═══════════════════════════════════════════════════════════════════════════════
 // AGENT 5 — RECRUITER_APPLICATIONS_LIST
 // ═══════════════════════════════════════════════════════════════════════════════
-public class RecruiterApplicationsListAgent extends BaseAgent {
+class RecruiterApplicationsListAgent extends BaseAgent {
     public RecruiterApplicationsListAgent(ServerConfig c, AuditLogger a) { super(c, a); }
 
     @Override public JsonNode getToolDefinition() {

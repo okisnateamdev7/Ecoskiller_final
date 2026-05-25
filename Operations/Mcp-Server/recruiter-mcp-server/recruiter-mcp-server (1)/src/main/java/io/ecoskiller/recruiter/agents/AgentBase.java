@@ -9,13 +9,7 @@ import io.ecoskiller.recruiter.security.AuditLogger;
 import java.time.Instant;
 import java.util.UUID;
 
-/**
- * Contract for all Recruiter MCP agents.
- */
-public interface AgentHandler {
-    JsonNode getToolDefinition();
-    JsonNode execute(JsonNode args) throws Exception;
-}
+
 
 // ─────────────────────────────────────────────────────────────────────────────
 

@@ -1,0 +1,307 @@
+Sending logs command via SSM...
+Command sent successfully. Command ID: bfcf713c-252c-4f55-9255-cd84bf93fe26
+Waiting for status results...
+[1] Status: Success
+
+================= STDOUT =================
+=== TRAEFIK POD LOGS ===
+[90m2026-05-23T09:16:35Z[0m [33mWRN[0m [1mTraefik can reject some encoded characters in the request path. When your backend is not fully compliant with [RFC 3986](https://datatracker.ietf.org/doc/html/rfc3986), it is recommended to set these options to `false` to avoid split-view situation. Refer to the documentation for more details: https://doc.traefik.io/traefik/v3.6/migrate/v3/#encoded-characters-configuration-default-values[0m
+[90m2026-05-23T09:16:35Z[0m [32mINF[0m [1mTraefik version 3.6.13 built on 2026-04-07T09:58:57Z[0m [36mversion=[0m3.6.13
+[90m2026-05-23T09:16:35Z[0m [32mINF[0m [1mVersion check is enabled.[0m
+[90m2026-05-23T09:16:35Z[0m [32mINF[0m [1mTraefik checks for new releases to notify you if your version is out of date.[0m
+[90m2026-05-23T09:16:35Z[0m [32mINF[0m [1mIt also collects usage data during this process.[0m
+[90m2026-05-23T09:16:35Z[0m [32mINF[0m [1mCheck the documentation to get more info: https://doc.traefik.io/traefik/contributing/data-collection/[0m
+[90m2026-05-23T09:16:35Z[0m [32mINF[0m [1m
+Stats collection is disabled.
+Help us improve Traefik by turning this feature on :)
+More details on: https://doc.traefik.io/traefik/contributing/data-collection/
+[0m
+[90m2026-05-23T09:16:35Z[0m [32mINF[0m [1mStarting provider aggregator *aggregator.ProviderAggregator[0m
+[90m2026-05-23T09:16:35Z[0m [32mINF[0m [1mStarting provider *traefik.Provider[0m
+[90m2026-05-23T09:16:35Z[0m [32mINF[0m [1mStarting provider *crd.Provider[0m
+[90m2026-05-23T09:16:35Z[0m [32mINF[0m [1mlabel selector is: ""[0m [36mproviderName=[0mkubernetescrd
+[90m2026-05-23T09:16:35Z[0m [32mINF[0m [1mCreating in-cluster Provider client[0m [36mproviderName=[0mkubernetescrd
+[90m2026-05-23T09:16:35Z[0m [32mINF[0m [1mStarting provider *ingress.Provider[0m
+[90m2026-05-23T09:16:35Z[0m [32mINF[0m [1mingress label selector is: ""[0m [36mproviderName=[0mkubernetes
+[90m2026-05-23T09:16:35Z[0m [32mINF[0m [1mCreating in-cluster Provider client[0m [36mproviderName=[0mkubernetes
+[90m2026-05-23T09:16:35Z[0m [32mINF[0m [1mStarting provider *acme.ChallengeTLSALPN[0m
+E0523 09:16:35.666734       1 reflector.go:205] "Failed to watch" err="failed to list *v1.Secret: Get \"https://10.43.0.1:443/api/v1/secrets?labelSelector=owner%21%3Dhelm&limit=500&resourceVersion=0\": tls: failed to verify certificate: x509: certificate signed by unknown authority" logger="UnhandledError" reflector="k8s.io/client-go@v0.34.3/tools/cache/reflector.go:290" type="*v1.Secret"
+E0523 09:16:35.704253       1 reflector.go:205] "Failed to watch" err="failed to list *v1.Ingress: Get \"https://10.43.0.1:443/apis/networking.k8s.io/v1/ingresses?limit=500&resourceVersion=0\": tls: failed to verify certificate: x509: certificate signed by unknown authority" logger="UnhandledError" reflector="k8s.io/client-go@v0.34.3/tools/cache/reflector.go:290" type="*v1.Ingress"
+E0523 09:16:35.707970       1 reflector.go:205] "Failed to watch" err="failed to list *v1.Secret: Get \"https://10.43.0.1:443/api/v1/secrets?labelSelector=owner%21%3Dhelm&limit=500&resourceVersion=0\": tls: failed to verify certificate: x509: certificate signed by unknown authority" logger="UnhandledError" reflector="k8s.io/client-go@v0.34.3/tools/cache/reflector.go:290" type="*v1.Secret"
+E0523 09:16:35.710130       1 reflector.go:205] "Failed to watch" err="failed to list *v1.EndpointSlice: Get \"https://10.43.0.1:443/apis/discovery.k8s.io/v1/endpointslices?limit=500&resourceVersion=0\": tls: failed to verify certificate: x509: certificate signed by unknown authority" logger="UnhandledError" reflector="k8s.io/client-go@v0.34.3/tools/cache/reflector.go:290" type="*v1.EndpointSlice"
+E0523 09:16:35.710441       1 reflector.go:205] "Failed to watch" err="failed to list *v1.ConfigMap: Get \"https://10.43.0.1:443/api/v1/configmaps?limit=500&resourceVersion=0\": tls: failed to verify certificate: x509: certificate signed by unknown authority" logger="UnhandledError" reflector="k8s.io/client-go@v0.34.3/tools/cache/reflector.go:290" type="*v1.ConfigMap"
+E0523 09:16:35.713183       1 reflector.go:205] "Failed to watch" err="failed to list *v1.Service: Get \"https://10.43.0.1:443/api/v1/services?limit=500&resourceVersion=0\": tls: failed to verify certificate: x509: certificate signed by unknown authority" logger="UnhandledError" reflector="k8s.io/client-go@v0.34.3/tools/cache/reflector.go:290" type="*v1.Service"
+E0523 09:16:35.772945       1 reflector.go:205] "Failed to watch" err="failed to list *v1.EndpointSlice: Get \"https://10.43.0.1:443/apis/discovery.k8s.io/v1/endpointslices?limit=500&resourceVersion=0\": tls: failed to verify certificate: x509: certificate signed by unknown authority" logger="UnhandledError" reflector="k8s.io/client-go@v0.34.3/tools/cache/reflector.go:290" type="*v1.EndpointSlice"
+E0523 09:16:35.774465       1 reflector.go:205] "Failed to watch" err="failed to list *v1alpha1.MiddlewareTCP: Get \"https://10.43.0.1:443/apis/traefik.io/v1alpha1/middlewaretcps?limit=500&resourceVersion=0\": tls: failed to verify certificate: x509: certificate signed by unknown authority" logger="UnhandledError" reflector="k8s.io/client-go@v0.34.3/tools/cache/reflector.go:290" type="*v1alpha1.MiddlewareTCP"
+E0523 09:16:35.775457       1 reflector.go:205] "Failed to watch" err="failed to list *v1alpha1.TraefikService: Get \"https://10.43.0.1:443/apis/traefik.io/v1alpha1/traefikservices?limit=500&resourceVersion=0\": tls: failed to verify certificate: x509: certificate signed by unknown authority" logger="UnhandledError" reflector="k8s.io/client-go@v0.34.3/tools/cache/reflector.go:290" type="*v1alpha1.TraefikService"
+E0523 09:16:35.781562       1 reflector.go:205] "Failed to watch" err="failed to list *v1alpha1.TLSOption: Get \"https://10.43.0.1:443/apis/traefik.io/v1alpha1/tlsoptions?limit=500&resourceVersion=0\": tls: failed to verify certificate: x509: certificate signed by unknown authority" logger="UnhandledError" reflector="k8s.io/client-go@v0.34.3/tools/cache/reflector.go:290" type="*v1alpha1.TLSOption"
+E0523 09:16:35.785101       1 reflector.go:205] "Failed to watch" err="failed to list *v1alpha1.Middleware: Get \"https://10.43.0.1:443/apis/traefik.io/v1alpha1/middlewares?limit=500&resourceVersion=0\": tls: failed to verify certificate: x509: certificate signed by unknown authority" logger="UnhandledError" reflector="k8s.io/client-go@v0.34.3/tools/cache/reflector.go:290" type="*v1alpha1.Middleware"
+E0523 09:16:35.785410       1 reflector.go:205] "Failed to watch" err="failed to list *v1alpha1.IngressRouteTCP: Get \"https://10.43.0.1:443/apis/traefik.io/v1alpha1/ingressroutetcps?limit=500&resourceVersion=0\": tls: failed to verify certificate: x509: certificate signed by unknown authority" logger="UnhandledError" reflector="k8s.io/client-go@v0.34.3/tools/cache/reflector.go:290" type="*v1alpha1.IngressRouteTCP"
+E0523 09:16:35.785620       1 reflector.go:205] "Failed to watch" err="failed to list *v1alpha1.ServersTransportTCP: Get \"https://10.43.0.1:443/apis/traefik.io/v1alpha1/serverstransporttcps?limit=500&resourceVersion=0\": tls: failed to verify certificate: x509: certificate signed by unknown authority" logger="UnhandledError" reflector="k8s.io/client-go@v0.34.3/tools/cache/reflector.go:290" type="*v1alpha1.ServersTransportTCP"
+E0523 09:16:35.785881       1 reflector.go:205] "Failed to watch" err="failed to list *v1alpha1.ServersTransport: Get \"https://10.43.0.1:443/apis/traefik.io/v1alpha1/serverstransports?limit=500&resourceVersion=0\": tls: failed to verify certificate: x509: certificate signed by unknown authority" logger="UnhandledError" reflector="k8s.io/client-go@v0.34.3/tools/cache/reflector.go:290" type="*v1alpha1.ServersTransport"
+E0523 09:16:35.785983       1 reflector.go:205] "Failed to watch" err="failed to list *v1alpha1.IngressRoute: Get \"https://10.43.0.1:443/apis/traefik.io/v1alpha1/ingressroutes?limit=500&resourceVersion=0\": tls: failed to verify certificate: x509: certificate signed by unknown authority" logger="UnhandledError" reflector="k8s.io/client-go@v0.34.3/tools/cache/reflector.go:290" type="*v1alpha1.IngressRoute"
+E0523 09:16:35.786371       1 reflector.go:205] "Failed to watch" err="failed to list *v1.Service: Get \"https://10.43.0.1:443/api/v1/services?limit=500&resourceVersion=0\": tls: failed to verify certificate: x509: certificate signed by unknown authority" logger="UnhandledError" reflector="k8s.io/client-go@v0.34.3/tools/cache/reflector.go:290" type="*v1.Service"
+E0523 09:16:35.786712       1 reflector.go:205] "Failed to watch" err="failed to list *v1alpha1.TLSStore: Get \"https://10.43.0.1:443/apis/traefik.io/v1alpha1/tlsstores?limit=500&resourceVersion=0\": tls: failed to verify certificate: x509: certificate signed by unknown authority" logger="UnhandledError" reflector="k8s.io/client-go@v0.34.3/tools/cache/reflector.go:290" type="*v1alpha1.TLSStore"
+E0523 09:16:35.787156       1 reflector.go:205] "Failed to watch" err="failed to list *v1alpha1.IngressRouteUDP: Get \"https://10.43.0.1:443/apis/traefik.io/v1alpha1/ingressrouteudps?limit=500&resourceVersion=0\": tls: failed to verify certificate: x509: certificate signed by unknown authority" logger="UnhandledError" reflector="k8s.io/client-go@v0.34.3/tools/cache/reflector.go:290" type="*v1alpha1.IngressRouteUDP"
+E0523 09:16:36.564091       1 reflector.go:205] "Failed to watch" err="failed to list *v1.EndpointSlice: Get \"https://10.43.0.1:443/apis/discovery.k8s.io/v1/endpointslices?limit=500&resourceVersion=0\": tls: failed to verify certificate: x509: certificate signed by unknown authority" logger="UnhandledError" reflector="k8s.io/client-go@v0.34.3/tools/cache/reflector.go:290" type="*v1.EndpointSlice"
+E0523 09:16:36.646668       1 reflector.go:205] "Failed to watch" err="failed to list *v1alpha1.ServersTransportTCP: Get \"https://10.43.0.1:443/apis/traefik.io/v1alpha1/serverstransporttcps?limit=500&resourceVersion=0\": tls: failed to verify certificate: x509: certificate signed by unknown authority" logger="UnhandledError" reflector="k8s.io/client-go@v0.34.3/tools/cache/reflector.go:290" type="*v1alpha1.ServersTransportTCP"
+E0523 09:16:36.716436       1 reflector.go:205] "Failed to watch" err="failed to list *v1alpha1.TLSStore: Get \"https://10.43.0.1:443/apis/traefik.io/v1alpha1/tlsstores?limit=500&resourceVersion=0\": tls: failed to verify certificate: x509: certificate signed by unknown authority" logger="UnhandledError" reflector="k8s.io/client-go@v0.34.3/tools/cache/reflector.go:290" type="*v1alpha1.TLSStore"
+E0523 09:16:36.883364       1 reflector.go:205] "Failed to watch" err="failed to list *v1.Service: Get \"https://10.43.0.1:443/api/v1/services?limit=500&resourceVersion=0\": tls: failed to verify certificate: x509: certificate signed by unknown authority" logger="UnhandledError" reflector="k8s.io/client-go@v0.34.3/tools/cache/reflector.go:290" type="*v1.Service"
+E0523 09:16:36.914608       1 reflector.go:205] "Failed to watch" err="failed to list *v1.ConfigMap: Get \"https://10.43.0.1:443/api/v1/configmaps?limit=500&resourceVersion=0\": tls: failed to verify certificate: x509: certificate signed by unknown authority" logger="UnhandledError" reflector="k8s.io/client-go@v0.34.3/tools/cache/reflector.go:290" type="*v1.ConfigMap"
+E0523 09:16:36.921237       1 reflector.go:205] "Failed to watch" err="failed to list *v1alpha1.ServersTransport: Get \"https://10.43.0.1:443/apis/traefik.io/v1alpha1/serverstransports?limit=500&resourceVersion=0\": tls: failed to verify certificate: x509: certificate signed by unknown authority" logger="UnhandledError" reflector="k8s.io/client-go@v0.34.3/tools/cache/reflector.go:290" type="*v1alpha1.ServersTransport"
+E0523 09:16:36.956457       1 reflector.go:205] "Failed to watch" err="failed to list *v1alpha1.IngressRouteTCP: Get \"https://10.43.0.1:443/apis/traefik.io/v1alpha1/ingressroutetcps?limit=500&resourceVersion=0\": tls: failed to verify certificate: x509: certificate signed by unknown authority" logger="UnhandledError" reflector="k8s.io/client-go@v0.34.3/tools/cache/reflector.go:290" type="*v1alpha1.IngressRouteTCP"
+E0523 09:16:37.007723       1 reflector.go:205] "Failed to watch" err="failed to list *v1.Secret: Get \"https://10.43.0.1:443/api/v1/secrets?labelSelector=owner%21%3Dhelm&limit=500&resourceVersion=0\": tls: failed to verify certificate: x509: certificate signed by unknown authority" logger="UnhandledError" reflector="k8s.io/client-go@v0.34.3/tools/cache/reflector.go:290" type="*v1.Secret"
+E0523 09:16:37.048546       1 reflector.go:205] "Failed to watch" err="failed to list *v1alpha1.Middleware: Get \"https://10.43.0.1:443/apis/traefik.io/v1alpha1/middlewares?limit=500&resourceVersion=0\": tls: failed to verify certificate: x509: certificate signed by unknown authority" logger="UnhandledError" reflector="k8s.io/client-go@v0.34.3/tools/cache/reflector.go:290" type="*v1alpha1.Middleware"
+E0523 09:16:37.114419       1 reflector.go:205] "Failed to watch" err="failed to list *v1.EndpointSlice: Get \"https://10.43.0.1:443/apis/discovery.k8s.io/v1/endpointslices?limit=500&resourceVersion=0\": tls: failed to verify certificate: x509: certificate signed by unknown authority" logger="UnhandledError" reflector="k8s.io/client-go@v0.34.3/tools/cache/reflector.go:290" type="*v1.EndpointSlice"
+E0523 09:16:37.115986       1 reflector.go:205] "Failed to watch" err="failed to list *v1alpha1.TLSOption: Get \"https://10.43.0.1:443/apis/traefik.io/v1alpha1/tlsoptions?limit=500&resourceVersion=0\": tls: failed to verify certificate: x509: certificate signed by unknown authority" logger="UnhandledError" reflector="k8s.io/client-go@v0.34.3/tools/cache/reflector.go:290" type="*v1alpha1.TLSOption"
+E0523 09:16:37.213567       1 reflector.go:205] "Failed to watch" err="failed to list *v1.Secret: Get \"https://10.43.0.1:443/api/v1/secrets?labelSelector=owner%21%3Dhelm&limit=500&resourceVersion=0\": tls: failed to verify certificate: x509: certificate signed by unknown authority" logger="UnhandledError" reflector="k8s.io/client-go@v0.34.3/tools/cache/reflector.go:290" type="*v1.Secret"
+E0523 09:16:37.214200       1 reflector.go:205] "Failed to watch" err="failed to list *v1alpha1.TraefikService: Get \"https://10.43.0.1:443/apis/traefik.io/v1alpha1/traefikservices?limit=500&resourceVersion=0\": tls: failed to verify certificate: x509: certificate signed by unknown authority" logger="UnhandledError" reflector="k8s.io/client-go@v0.34.3/tools/cache/reflector.go:290" type="*v1alpha1.TraefikService"
+E0523 09:16:37.248074       1 reflector.go:205] "Failed to watch" err="failed to list *v1.Ingress: Get \"https://10.43.0.1:443/apis/networking.k8s.io/v1/ingresses?limit=500&resourceVersion=0\": tls: failed to verify certificate: x509: certificate signed by unknown authority" logger="UnhandledError" reflector="k8s.io/client-go@v0.34.3/tools/cache/reflector.go:290" type="*v1.Ingress"
+=== TRAEFIK POD DESCRIPTION ===
+apiVersion: v1
+items:
+- apiVersion: v1
+  kind: Pod
+  metadata:
+    annotations:
+      prometheus.io/path: /metrics
+      prometheus.io/port: "9100"
+      prometheus.io/scrape: "true"
+    creationTimestamp: "2026-05-20T13:06:35Z"
+    generateName: traefik-9bcdbbd9-
+    generation: 1
+    labels:
+      app.kubernetes.io/instance: traefik-kube-system
+      app.kubernetes.io/managed-by: Helm
+      app.kubernetes.io/name: traefik
+      helm.sh/chart: traefik-39.0.701_up39.0.7
+      pod-template-hash: 9bcdbbd9
+    name: traefik-9bcdbbd9-764vc
+    namespace: kube-system
+    ownerReferences:
+    - apiVersion: apps/v1
+      blockOwnerDeletion: true
+      controller: true
+      kind: ReplicaSet
+      name: traefik-9bcdbbd9
+      uid: 1a13e7a3-6644-4b7d-8280-e95b215274a8
+    resourceVersion: "192850"
+    uid: e3531131-255b-4e0f-ba5d-18669adb5cc6
+  spec:
+    automountServiceAccountToken: true
+    containers:
+    - args:
+      - --entryPoints.metrics.address=:9100/tcp
+      - --entryPoints.traefik.address=:8080/tcp
+      - --entryPoints.web.address=:8000/tcp
+      - --entryPoints.websecure.address=:8443/tcp
+      - --api.dashboard=true
+      - --ping=true
+      - --metrics.prometheus=true
+      - --metrics.prometheus.entrypoint=metrics
+      - --providers.kubernetescrd
+      - --providers.kubernetescrd.allowEmptyServices=true
+      - --providers.kubernetesingress
+      - --providers.kubernetesingress.allowEmptyServices=true
+      - --providers.kubernetesingress.ingressendpoint.publishedservice=kube-system/traefik
+      - --entryPoints.websecure.http.tls=true
+      - --log.level=INFO
+      env:
+      - name: POD_NAME
+        valueFrom:
+          fieldRef:
+            apiVersion: v1
+            fieldPath: metadata.name
+      - name: POD_NAMESPACE
+        valueFrom:
+          fieldRef:
+            apiVersion: v1
+            fieldPath: metadata.namespace
+      - name: USER
+        value: traefik
+      image: rancher/mirrored-library-traefik:3.6.13
+      imagePullPolicy: IfNotPresent
+      livenessProbe:
+        failureThreshold: 3
+        httpGet:
+          path: /ping
+          port: 8080
+          scheme: HTTP
+        initialDelaySeconds: 2
+        periodSeconds: 10
+        successThreshold: 1
+        timeoutSeconds: 2
+      name: traefik
+      ports:
+      - containerPort: 9100
+        name: metrics
+        protocol: TCP
+      - containerPort: 8080
+        name: traefik
+        protocol: TCP
+      - containerPort: 8000
+        name: web
+        protocol: TCP
+      - containerPort: 8443
+        name: websecure
+        protocol: TCP
+      readinessProbe:
+        failureThreshold: 1
+        httpGet:
+          path: /ping
+          port: 8080
+          scheme: HTTP
+        initialDelaySeconds: 2
+        periodSeconds: 10
+        successThreshold: 1
+        timeoutSeconds: 2
+      resources: {}
+      securityContext:
+        allowPrivilegeEscalation: false
+        capabilities:
+          drop:
+          - ALL
+        readOnlyRootFilesystem: true
+      terminationMessagePath: /dev/termination-log
+      terminationMessagePolicy: File
+      volumeMounts:
+      - mountPath: /data
+        name: data
+      - mountPath: /tmp
+        name: tmp
+      - mountPath: /var/run/secrets/kubernetes.io/serviceaccount
+        name: kube-api-access-fpb7k
+        readOnly: true
+    dnsPolicy: ClusterFirst
+    enableServiceLinks: true
+    nodeName: ip-172-31-40-152
+    preemptionPolicy: PreemptLowerPriority
+    priority: 2000000000
+    priorityClassName: system-cluster-critical
+    restartPolicy: Always
+    schedulerName: default-scheduler
+    securityContext:
+      runAsGroup: 65532
+      runAsNonRoot: true
+      runAsUser: 65532
+      seccompProfile:
+        type: RuntimeDefault
+    serviceAccount: traefik
+    serviceAccountName: traefik
+    terminationGracePeriodSeconds: 60
+    tolerations:
+    - key: CriticalAddonsOnly
+      operator: Exists
+    - effect: NoSchedule
+      key: node-role.kubernetes.io/control-plane
+      operator: Exists
+    - effect: NoExecute
+      key: node.kubernetes.io/not-ready
+      operator: Exists
+      tolerationSeconds: 300
+    - effect: NoExecute
+      key: node.kubernetes.io/unreachable
+      operator: Exists
+      tolerationSeconds: 300
+    volumes:
+    - emptyDir: {}
+      name: data
+    - emptyDir: {}
+      name: tmp
+    - name: kube-api-access-fpb7k
+      projected:
+        defaultMode: 420
+        sources:
+        - serviceAccountToken:
+            expirationSeconds: 3607
+            path: token
+        - configMap:
+            items:
+            - key: ca.crt
+              path: ca.crt
+            name: kube-root-ca.crt
+        - downwardAPI:
+            items:
+            - fieldRef:
+                apiVersion: v1
+                fieldPath: metadata.namespace
+              path: namespace
+  status:
+    conditions:
+    - lastProbeTime: null
+      lastTransitionTime: "2026-05-23T09:16:34Z"
+      observedGeneration: 1
+      status: "True"
+      type: PodReadyToStartContainers
+    - lastProbeTime: null
+      lastTransitionTime: "2026-05-20T13:06:40Z"
+      observedGeneration: 1
+      status: "True"
+      type: Initialized
+    - lastProbeTime: null
+      lastTransitionTime: "2026-05-23T09:16:38Z"
+      message: 'containers with unready status: [traefik]'
+      observedGeneration: 1
+      reason: ContainersNotReady
+      status: "False"
+      type: Ready
+    - lastProbeTime: null
+      lastTransitionTime: "2026-05-23T09:16:38Z"
+      message: 'containers with unready status: [traefik]'
+      observedGeneration: 1
+      reason: ContainersNotReady
+      status: "False"
+      type: ContainersReady
+    - lastProbeTime: null
+      lastTransitionTime: "2026-05-20T13:06:35Z"
+      observedGeneration: 1
+      status: "True"
+      type: PodScheduled
+    containerStatuses:
+    - containerID: containerd://d837d2b54c0f5e80fbd8065616510ec49fd7fcc65612cdeb2a6ecbf58ca35d98
+      image: docker.io/rancher/mirrored-library-traefik:3.6.13
+      imageID: docker.io/rancher/mirrored-library-traefik@sha256:34d5089d0b414945342848518b383f11f5b3a645504ed87b77ffeb9d683d0e48
+      lastState: {}
+      name: traefik
+      ready: false
+      resources: {}
+      restartCount: 0
+      started: false
+      state:
+        terminated:
+          containerID: containerd://d837d2b54c0f5e80fbd8065616510ec49fd7fcc65612cdeb2a6ecbf58ca35d98
+          exitCode: 137
+          finishedAt: "2026-05-23T09:16:37Z"
+          reason: Error
+          startedAt: "2026-05-23T09:16:35Z"
+      user:
+        linux:
+          gid: 65532
+          supplementalGroups:
+          - 65532
+          uid: 65532
+      volumeMounts:
+      - mountPath: /data
+        name: data
+      - mountPath: /tmp
+        name: tmp
+      - mountPath: /var/run/secrets/kubernetes.io/serviceaccount
+        name: kube-api-access-fpb7k
+        readOnly: true
+        recursiveReadOnly: Disabled
+    hostIP: 172.31.40.152
+    hostIPs:
+    - ip: 172.31.40.152
+    observedGeneration: 1
+    phase: Running
+    podIP: 10.42.0.190
+    podIPs:
+    - ip: 10.42.0.190
+    qosClass: BestEffort
+    startTime: "2026-05-20T13:06:40Z"
+kind: List
+metadata:
+  resourceVersion: ""
+
+================= STDERR =================
+

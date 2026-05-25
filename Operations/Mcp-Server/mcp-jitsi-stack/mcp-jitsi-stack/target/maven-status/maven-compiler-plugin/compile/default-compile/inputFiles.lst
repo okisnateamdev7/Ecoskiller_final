@@ -1,0 +1,16 @@
+D:\Project\Ecoskiller\Operations\Mcp-Server\mcp-jitsi-stack\mcp-jitsi-stack\src\main\java\com\ecoskiller\mcp\jitsi\agents\AgentHandler.java
+D:\Project\Ecoskiller\Operations\Mcp-Server\mcp-jitsi-stack\mcp-jitsi-stack\src\main\java\com\ecoskiller\mcp\jitsi\agents\AgentResult.java
+D:\Project\Ecoskiller\Operations\Mcp-Server\mcp-jitsi-stack\mcp-jitsi-stack\src\main\java\com\ecoskiller\mcp\jitsi\agents\CoturnNatTraversalAgent.java
+D:\Project\Ecoskiller\Operations\Mcp-Server\mcp-jitsi-stack\mcp-jitsi-stack\src\main\java\com\ecoskiller\mcp\jitsi\agents\FreeswitchPstnBridgeAgent.java
+D:\Project\Ecoskiller\Operations\Mcp-Server\mcp-jitsi-stack\mcp-jitsi-stack\src\main\java\com\ecoskiller\mcp\jitsi\agents\GdSessionOrchestratorAgent.java
+D:\Project\Ecoskiller\Operations\Mcp-Server\mcp-jitsi-stack\mcp-jitsi-stack\src\main\java\com\ecoskiller\mcp\jitsi\agents\JicofoParticipantRoutingAgent.java
+D:\Project\Ecoskiller\Operations\Mcp-Server\mcp-jitsi-stack\mcp-jitsi-stack\src\main\java\com\ecoskiller\mcp\jitsi\agents\JicofoRoomLifecycleAgent.java
+D:\Project\Ecoskiller\Operations\Mcp-Server\mcp-jitsi-stack\mcp-jitsi-stack\src\main\java\com\ecoskiller\mcp\jitsi\agents\JitsiHealthMonitorAgent.java
+D:\Project\Ecoskiller\Operations\Mcp-Server\mcp-jitsi-stack\mcp-jitsi-stack\src\main\java\com\ecoskiller\mcp\jitsi\agents\JitsiWebSessionAgent.java
+D:\Project\Ecoskiller\Operations\Mcp-Server\mcp-jitsi-stack\mcp-jitsi-stack\src\main\java\com\ecoskiller\mcp\jitsi\agents\JvbQualityMetricsAgent.java
+D:\Project\Ecoskiller\Operations\Mcp-Server\mcp-jitsi-stack\mcp-jitsi-stack\src\main\java\com\ecoskiller\mcp\jitsi\agents\JvbStreamRoutingAgent.java
+D:\Project\Ecoskiller\Operations\Mcp-Server\mcp-jitsi-stack\mcp-jitsi-stack\src\main\java\com\ecoskiller\mcp\jitsi\agents\MediaSecurityAuditAgent.java
+D:\Project\Ecoskiller\Operations\Mcp-Server\mcp-jitsi-stack\mcp-jitsi-stack\src\main\java\com\ecoskiller\mcp\jitsi\agents\ProsodyJwtValidationAgent.java
+D:\Project\Ecoskiller\Operations\Mcp-Server\mcp-jitsi-stack\mcp-jitsi-stack\src\main\java\com\ecoskiller\mcp\jitsi\agents\ProsodyXmppSignallingAgent.java
+D:\Project\Ecoskiller\Operations\Mcp-Server\mcp-jitsi-stack\mcp-jitsi-stack\src\main\java\com\ecoskiller\mcp\jitsi\security\McpSecurityManager.java
+D:\Project\Ecoskiller\Operations\Mcp-Server\mcp-jitsi-stack\mcp-jitsi-stack\src\main\java\com\ecoskiller\mcp\jitsi\server\JitsiMcpServer.java

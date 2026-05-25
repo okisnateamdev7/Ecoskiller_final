@@ -28,7 +28,7 @@ import org.json.*;
 public class McpWebRTCServer {
 
     private static final Logger LOG = Logger.getLogger(McpWebRTCServer.class.getName());
-    static final String MCP_VERSION = "2024-11-05";
+    public static final String MCP_VERSION = "2024-11-05";
     static final String SERVER_NAME = "mcp-webrtc-ecoskiller";
     static final String SERVER_VERSION = "1.0.0";
 

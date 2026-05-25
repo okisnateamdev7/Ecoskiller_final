@@ -185,7 +185,10 @@ public class RedisConfig {
     // -------------------------------------------------------------------------
 
     private static String env(String name, String defaultValue) {
-        String val = System.getenv(name);
+        String val = System.getProperty(name);
+        if (val == null || val.isEmpty()) {
+            val = System.getenv(name);
+        }
         return (val != null && !val.isEmpty()) ? val : defaultValue;
     }
 
